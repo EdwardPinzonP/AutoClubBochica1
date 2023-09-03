@@ -52,98 +52,74 @@
                 @endif
             </div>
         </div>
-        <div class="imagenF">
-            <div class="inf">
-                <h1 class="infor">¿Qué esperás para ser parte de nuestra escuela?</h1>
-                <h1 class="informa">¡Inscríbete ahora!</h1>
-            </div>
-        </div>
-        <h1 class="cursos">Cursos</h1>
-        <div>
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div class="ca2">
-                                <div>
-                                    <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria A2</h2>
-                                </div>
-                                <div>
-                                    <img src="{{ asset('img/categoriaa2.png') }}" alt="">
-                                </div>
-                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                    Desde: $922.000
-                                </div>
-                                <div>
-                                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                        En nuestra escuela de conducción, ofrecemos un completo programa de formación para la categoría A2, que se enfoca en motocicletas y ciclomotores. Si estás buscando obtener tu licencia para conducir estos vehículos de manera segura y confiada, nuestro equipo de instructores altamente capacitados está aquí para guiarte en cada paso del camino.
-                                    </p>
-                                </div>
-                                <a href="{{ route('inscripcion.index') }}"><button class="boton">¡Inscribete Ahora!</button></a>
-                            </div>
-                        </div>
-                        <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div class="cb1">
-                                <div>
-                                    <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria B1</h2>
-                                </div>
-                                <div>
-                                    <img src="{{ asset('img/categoriab1.png') }}" alt="">
-                                </div>
-                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                    Desde: $1.122.000
-                                </div>
-                                <div style="margin-block-end: 20px">
-                                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                        La categoría B1 en nuestra escuela de conducción te ofrece la oportunidad de aprender a manejar automóviles y vehículos ligeros de manera segura y eficiente. Esta categoría es ideal si estás buscando obtener tu licencia para conducir coches particulares, vehículos utilitarios deportivos (SUV) y otros vehículos ligeros.  
-                                    </p>
-                                </div>
-                                <a href="{{  route('inscripcion.index')  }}"><button class="boton">¡Inscribete Ahora!</button></a>
-                            </div>
-                        </div>
-                        <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div class="cc1">
-                                <div>
-                                    <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria C1</h2>
-                                </div>
-                                <div>
-                                    <img src="{{ asset('img/categoriac1.png') }}" alt="">
-                                </div>
-                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                    Desde: $1.302.000
-                                </div>
-                                <div>
-                                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                        La categoría C1 de nuestra escuela de conducción se enfoca en prepararte para manejar vehículos de carga ligera y transporte de personas. Si estás interesado en expandir tus habilidades de conducción y adquirir el conocimiento necesario para operar vehículos más grandes y versátiles, esta categoría es ideal para ti.
-                                    </p>
-                                </div>
-                                <a href="{{ route('inscripcion.index') }}"><button class="boton">¡Inscribete Ahora!</button></a>
-                            </div>
-                        </div>
-                        <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div class="cc2">
-                                <div>
-                                    <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria C2</h2>
-                                </div>
-                                <div>
-                                    <img src="{{ asset('img/categoriac2.png') }}" alt="">
-                                </div>
-                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                    Desde: $1.272.000
-                                </div>
-                                <div>
-                                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                        La categoría C2 en nuestra escuela de conducción está diseñada para aquellos que desean adquirir las habilidades necesarias para operar vehículos comerciales medianos de manera segura y competente. Si tienes aspiraciones en el ámbito del transporte de carga o servicios de reparto, esta categoría es ideal para ti.
-                                    </p>
-                                </div>
-                                <a href="{{ route('inscripcion.index') }}"><button class="boton">¡Inscribete Ahora!</button></a>
-                            </div>
-                        </div>
+        <x-guest-layout>
+            <x-authentication-card>
+                <x-slot name="logo">
+                    <x-authentication-card-logo />
+                </x-slot>
+        
+                <x-validation-errors class="mb-4" />
+        
+                @if (session('status'))
+                    <div class="mb-4 font-medium text-sm text-green-600">
+                        {{ session('status') }}
                     </div>
-                </div> 
-            </div>
-        </div>
-    </body>
+                @endif
+                <div style="text-align: center">Formulario de inscripción</div>
+        
+                <form action="{{ route('pago.index') }}">
+                    @csrf
+        
+                    <div>
+                        <x-label for="nombre" value="{{ __('Nombres') }}" />
+                        <x-input id="nombre" class="block mt-1 w-full" type="text" name="nombre" required autofocus autocomplete="username" />
+                    </div>
+        
+                    <div class="mt-4">
+                        <x-label for="apellido" value="{{ __('Apellidos') }}" />
+                        <x-input id="apellido" class="block mt-1 w-full" type="text" name="apellido" required/>
+                    </div>
+
+                    <div class="mt-4">
+                        <x-label for="tipoDocumento" value="{{ __('Tipo de documento') }}" />
+                        <select id="apellido" class="block mt-1 w-full" type="text" name="tipoDocumento">
+                            <Option value="">Cédula de ciudadanía</Option>
+                            <option value="">Tarjeta de identidad</option>
+                            <option value="">Cédula de extranjería</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-4">
+                        <x-label for="documento" value="{{ __('Número de documento') }}" />
+                        <x-input id="documento" class="block mt-1 w-full" type="number" name="documento" required/>
+                    </div>
+
+                    <div class="mt-4">
+                        <x-label for="fotodocumento" value="{{ __('Adjuntar documento') }}" />
+                        <x-input id="fotodocumento" class="block mt-1 w-full" type="file" name="fotodocumento" required/>
+                    </div>
+
+                    <div class="mt-4">
+                        <x-label for="examenes" value="{{ __('Adjuntar exámenes médicos') }}" />
+                        <x-input id="examenes" class="block mt-1 w-full" type="file" name="examenes" required/>
+                    </div>
+
+                    <div class="mt-4">
+                        <x-label for="runt" value="{{ __('Adjuntar registro del runt') }}" />
+                        <x-input id="runt" class="block mt-1 w-full" type="file" name="runt" required/>
+                    </div>
+        
+                    <div class="flex items-center justify-center mt-4">
+                        
+                        <x-button class="ml-4">
+                            {{ __('siguiente') }}
+                        </x-button>
+                    </div>
+                </form>
+            </x-authentication-card>
+        </x-guest-layout>
+        
+    </body> 
     <footer>
         <div class="cont">
             <div style="margin-top: 5px" class="tele">

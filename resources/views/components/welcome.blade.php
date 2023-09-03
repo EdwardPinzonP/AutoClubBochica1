@@ -1,4 +1,5 @@
 @if(Auth::user()->rol=="Aprendiz")
+    <div class="apre">Hola Aprendiz {{ Auth::user()->name }}</div>
     @section('content')
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -10,10 +11,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="">{{ __('Horario') }}</a>
                 </li>
-            </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('aprendices.index') }}">{{ __('Participantes') }}</a>
+                </li>
             </div>
         </nav>
-        <h1>HOLA SOY APRENDIZ</h1>
+        
     </div>
     @endsection
 

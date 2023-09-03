@@ -28,3 +28,11 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('participantes','AprendicesController@index')->name('aprendices.index');
+
+Route::get('pago','PagoController@index')->name('pago.index');
+
+Route::get('inscripcion','InscripcionController@index')->name('inscripcion.index');
+
+Route::get('inicio','InicioController@index')->name('inicio.index');
