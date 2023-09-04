@@ -3,26 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
-use App\Models\Aprendices;
-use App\Models\Categorias;
-use App\Models\Cursos;
+use App\Models\Instructores;
 
-class AprendicesController extends Controller
+class InstructoresController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $aprendices = DB::table('Aprendices')
-        ->join('Categorias', 'Categorias.Id_categoria', '=', 'Aprendices.Id_categoria')
-        ->join('Cursos', 'Cursos.Id_curso', '=', 'Aprendices.Id_curso')
-        ->select('Aprendices.*')
-        ->where('Categorias.Id_categoria', '=', 1)
-        ->orderBy('Aprendices.Nombres','ASC')
-        ->get();
-        return view('aprendices.participantes', ['aprendices'=>$aprendices]);
+        //
     }
 
     /**
@@ -54,13 +44,13 @@ class AprendicesController extends Controller
      */
     public function edit(string $id)
     {
-        $cantidadaprendices = Aprendices::where('iduser','=',$id)->count();
-        if($cantidadaprendices>0){
-            $aprendices = Aprendices::where('iduser','=',$id)->get();
-            return view('aprendices/edit',['aprendices'=>$aprendices])->with('emp',$cantidadaprendices);
+        $cantidadinstructores = Instructores::where('iduser','=',$id)->count();
+        if($cantidadinstructores>0){
+            $instructores = Instructores::where('iduser','=',$id)->get();
+            return view('instructores/edit',['instructores'=>$instructores])->with('emp',$cantidadinstructores);
         }
         else{
-            return view('aprendices/edit')->with('emp',$cantidadaprendices);
+            return view('instructores/edit')->with('emp',$cantidadinstructores);
         }
     }
 
@@ -69,30 +59,30 @@ class AprendicesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $cantidadaprendices = Aprendices::where('iduser','=', $id)->count();
-        if($cantidadaprendices>0){
-            $aprendices = Aprendices::where('iduser','=', $id);
-            $aprendices->update([
+        $cantidadinstructores = Instructores::where('iduser','=', $id)->count();
+        if($cantidadinstructores>0){
+            $instructores = Instructores::where('iduser','=', $id);
+            $instructores->update([
                 'iduser'=>request('codigo'),
                 'Nombres'=>request('nombres'),
                 'Apellidos'=>request('apellidos'),
                 'Contacto'=>request('contacto'),
-                'FechaNacimiento'=>request('fechanacimiento'),
-                'Correo'=>request('correo'),
                 'TipoDocumento'=>request('tipodocumento'),
-                'NumeroDocumento'=>request('numerodocumento')
+                'NumeroDocumento'=>request('numerodocumento'),
+                'FechaNacimiento'=>request('fechanacimiento'),
+                'Correo'=>request('correo')
             ]);
         }
         else{
-            Aprendices::create([
+            Instructores::create([
                 'iduser'=>request('codigo'),
                 'Nombres'=>request('nombres'),
                 'Apellidos'=>request('apellidos'),
                 'Contacto'=>request('contacto'),
-                'FechaNacimiento'=>request('fechanacimiento'),
-                'Correo'=>request('correo'),
                 'TipoDocumento'=>request('tipodocumento'),
-                'NumeroDocumento'=>request('numerodocumento')
+                'NumeroDocumento'=>request('numerodocumento'),
+                'FechaNacimiento'=>request('fechanacimiento'),
+                'Correo'=>request('correo')
             ]);
         }
         return redirect()->route('home');
