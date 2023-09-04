@@ -19,7 +19,7 @@ class AprendicesController extends Controller
         ->join('Categorias', 'Categorias.Id_categoria', '=', 'Aprendices.Id_categoria')
         ->join('Cursos', 'Cursos.Id_curso', '=', 'Aprendices.Id_curso')
         ->select('Aprendices.*')
-        ->where('Categorias.Id_categoria', '=', 1)
+        ->where('Categorias.Id_categoria', '=', 6)
         ->orderBy('Aprendices.Nombres','ASC')
         ->get();
         return view('aprendices.participantes', ['aprendices'=>$aprendices]);
