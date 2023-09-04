@@ -4,7 +4,7 @@
     <form action=" {{route ('aprendices.update', Auth::user()->id) }})" method="put">
         @csrf
     @if($emp>0)
-            @forelse($aprendices as $emp)
+            @foreach($aprendices as $emp)
             <div>
                 <label for="">Codigo usuario</label>
                 <input id="" name="codigo" type="text" value="{{$emp->iduser}}">
@@ -30,7 +30,7 @@
                 <input id="" name="correo" type="text" value="{{$emp->Correo}}">
             </div>
             <div>
-                <x-label for="tipodocumento" value="{{$emp->TipoDocumento}}">
+                <x-label for="tipodocumento" value="{{$emp->TipoDocumento}}"/>
                     <select id="" type="text" name="tipodocumento">
                         <Option value="">Cédula de ciudadanía</Option>
                         <option value="">Tarjeta de identidad</option>
@@ -41,8 +41,7 @@
                 <label for="">Número de documento</label>
                 <input type="number" name="numerodocumento" id="" value="{{$emp->NumeroDocumento}}">
             </div>
-            @empty
-            @endforelse
+            @endforeach
     @else
         <div>
             <label for="">Codigo usuario</label>
@@ -69,7 +68,7 @@
             <input id="" name="correo" type="text" value="{{ Auth::user()->Correo}}">
         </div>
         <div>
-            <x-label for="tipodocumento" value="{{ Auth::user()->TipoDocumento}}">
+            <x-label for="tipodocumento" value="{{ Auth::user()->TipoDocumento}}"/>
                 <select id="" type="text" name="tipodocumento">
                     <Option value="">Cédula de ciudadanía</Option>
                     <option value="">Tarjeta de identidad</option>
