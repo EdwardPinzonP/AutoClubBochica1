@@ -54,10 +54,7 @@
         </div>
         <x-guest-layout>
             <x-authentication-card>
-                <x-slot name="logo">
-                    <x-authentication-card-logo />
-                </x-slot>
-        
+
                 <x-validation-errors class="mb-4" />
         
                 @if (session('status'))
@@ -128,7 +125,7 @@
             </x-authentication-card>
         </x-guest-layout>
     </body> 
-    <footer>
+    <footer style="margin-top: 20px">
         <div class="cont">
             <div style="margin-top: 5px" class="tele">
                 <div style="font-size: 30px">
