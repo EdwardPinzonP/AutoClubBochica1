@@ -33,11 +33,11 @@
             </div>
             <div class="mt-4">
                 <x-label for="tipodocumento" value="{{$emp->TipoDocumento}}"/>
-                    <select id="" class="block mt-1 w-full" type="text" name="tipodocumento">
-                        <Option value="">Cédula de ciudadanía</Option>
-                        <option value="">Tarjeta de identidad</option>
-                        <option value="">Cédula de extranjería</option>
-                    </select>
+                    <select id="tipodocumento" class="block mt-1 w-full" type="text" name="tipodocumento">
+                        <option value="Cédula de ciudadanía" {{ Auth::user()->TipoDocumento == 'Cédula de ciudadanía' ? 'selected' : '' }}>Cédula de ciudadanía</option>
+                        <option value="Tarjeta de identidad" {{ Auth::user()->TipoDocumento == 'Tarjeta de identidad' ? 'selected' : '' }}>Tarjeta de identidad</option>
+                        <option value="Cédula de extranjería" {{ Auth::user()->TipoDocumento == 'Cédula de extranjería' ? 'selected' : '' }}>Cédula de extranjería</option>
+                    </select>                    
             </div>
             <div class="mt-4">
                 <label for="">Número de documento</label>
@@ -72,10 +72,10 @@
     </div>
     <div class="mt-4">
         <x-label for="tipodocumento" value="{{ __('Tipo de documento') }}"/>
-            <select id="" class="block mt-1 w-full" type="text" name="tipodocumento" value="{{ Auth::user()->TipoDocumento}}>
-                <Option value="">Cédula de ciudadanía</Option>
-                <option value="">Tarjeta de identidad</option>
-                <option value="">Cédula de extranjería</option>
+            <select id="tipodocumento" class="block mt-1 w-full" type="text" name="tipodocumento">
+                <option value="Cédula de ciudadanía" {{ Auth::user()->TipoDocumento == 'Cédula de ciudadanía' ? 'selected' : '' }}>Cédula de ciudadanía</option>
+                <option value="Tarjeta de identidad" {{ Auth::user()->TipoDocumento == 'Tarjeta de identidad' ? 'selected' : '' }}>Tarjeta de identidad</option>
+                <option value="Cédula de extranjería" {{ Auth::user()->TipoDocumento == 'Cédula de extranjería' ? 'selected' : '' }}>Cédula de extranjería</option>
             </select>
     </div>
     <div class="mt-4">
@@ -97,6 +97,7 @@
         </x-button>
     </div>
 @endif
+<x-button class="ml-4">Actualizar</x-button>
 </div>
 </form>
 </x-authentication-card>

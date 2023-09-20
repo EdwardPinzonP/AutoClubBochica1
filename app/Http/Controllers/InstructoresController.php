@@ -59,34 +59,36 @@ class InstructoresController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $cantidadinstructores = Instructores::where('iduser','=', $id)->count();
-        if($cantidadinstructores>0){
-            $instructores = Instructores::where('iduser','=', $id);
-            $instructores->update([
-                'iduser'=>request('codigo'),
-                'Nombres'=>request('nombres'),
-                'Apellidos'=>request('apellidos'),
-                'Contacto'=>request('contacto'),
-                'TipoDocumento'=>request('tipodocumento'),
-                'NumeroDocumento'=>request('numerodocumento'),
-                'FechaNacimiento'=>request('fechanacimiento'),
-                'Correo'=>request('correo')
-            ]);
-        }
-        else{
-            Instructores::create([
-                'iduser'=>request('codigo'),
-                'Nombres'=>request('nombres'),
-                'Apellidos'=>request('apellidos'),
-                'Contacto'=>request('contacto'),
-                'TipoDocumento'=>request('tipodocumento'),
-                'NumeroDocumento'=>request('numerodocumento'),
-                'FechaNacimiento'=>request('fechanacimiento'),
-                'Correo'=>request('correo')
-            ]);
-        }
-        return redirect()->route('home');
+    $cantidadinstructores = Instructores::where('iduser', $id)->count();
+
+    if ($cantidadinstructores > 0) {
+        $instructores = Instructores::where('iduser', $id)->first();
+
+        $instructores->iduser = $request->input('codigo');
+        $instructores->Nombres = $request->input('nombres');
+        $instructores->Apellidos = $request->input('apellidos');
+        $instructores->Contacto = $request->input('contacto');
+        $instructores->TipoDocumento = $request->input('tipodocumento');
+        $instructores->NumeroDocumento = $request->input('numerodocumento');
+        $instructores->FechaNacimiento = $request->input('fechanacimiento');
+        $instructores->Correo = $request->input('correo');
+        $instructores->save();
+    } else {
+        Instructores::create([
+            'iduser' => $request->input('codigo'),
+            'Nombres' => $request->input('nombres'),
+            'Apellidos' => $request->input('apellidos'),
+            'Contacto' => $request->input('contacto'),
+            'TipoDocumento' => $request->input('tipodocumento'),
+            'NumeroDocumento' => $request->input('numerodocumento'),
+            'FechaNacimiento' => $request->input('fechanacimiento'),
+            'Correo' => $request->input('correo'),
+        ]);
     }
+
+    return redirect()->route('dashboard');
+    }
+
 
     /**
      * Remove the specified resource from storage.
