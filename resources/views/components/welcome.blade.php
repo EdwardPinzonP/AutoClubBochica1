@@ -27,7 +27,11 @@
                 ->where('aprendices.iduser', $aprendizId)
                 ->get();
             @endphp
-
+            <ul>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ route('aprendices.edit', Auth::user()->id )}}">{{ __('Actualizar datos') }}</a>
+                </li>
+            </ul>
             @if ($cursoDeConduccion)
             @foreach ($cursoDeConduccion as $categoria)
             @csrf
