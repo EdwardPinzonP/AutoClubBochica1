@@ -73,9 +73,9 @@
     <div class="mt-4">
         <x-label for="tipodocumento" value="{{ __('Tipo de documento') }}"/>
             <select id="" class="block mt-1 w-full" type="text" name="tipodocumento" value="{{ Auth::user()->TipoDocumento}}">
-                <option value="">Cédula de ciudadanía</option>
-                <option value="">Tarjeta de identidad</option>
-                <option value="">Cédula de extranjería</option>
+                <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+                <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+                <option value="Cédula de extranjería">Cédula de extranjería</option>
             </select>
     </div>
     <div class="mt-4">

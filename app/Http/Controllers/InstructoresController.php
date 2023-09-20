@@ -85,7 +85,7 @@ class InstructoresController extends Controller
                 'Correo'=>request('correo')
             ]);
         }
-        return redirect()->route('home');
+        return redirect()->route('dashboard');
     }
 
     /**
