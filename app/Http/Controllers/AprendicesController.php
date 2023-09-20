@@ -95,7 +95,7 @@ class AprendicesController extends Controller
                 'NumeroDocumento'=>request('numerodocumento')
             ]);
         }
-        return redirect()->route('home');
+        return redirect()->route('dashboard');
     }
 
     /**

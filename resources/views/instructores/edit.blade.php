@@ -72,8 +72,8 @@
     </div>
     <div class="mt-4">
         <x-label for="tipodocumento" value="{{ __('Tipo de documento') }}"/>
-            <select id="" class="block mt-1 w-full" type="text" name="tipodocumento" value="{{ Auth::user()->TipoDocumento}}>
-                <Option value="">Cédula de ciudadanía</Option>
+            <select id="" class="block mt-1 w-full" type="text" name="tipodocumento" value="{{ Auth::user()->TipoDocumento}}">
+                <option value="">Cédula de ciudadanía</option>
                 <option value="">Tarjeta de identidad</option>
                 <option value="">Cédula de extranjería</option>
             </select>
@@ -91,12 +91,13 @@
         <input id="" class="block mt-1 w-full" name="correo" type="text" value="{{ Auth::user()->Correo}}">
     </div>
     <div class="flex items-center justify-center mt-4">
-                        
+
         <x-button class="ml-4">
             {{ __('Actualizar') }}
-        </x-button>
+            </x-button>
+                        
     </div>
-@endif
+@endif     
 </div>
 </form>
 </x-authentication-card>
