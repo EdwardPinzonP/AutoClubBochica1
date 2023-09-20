@@ -59,7 +59,6 @@ class InstructoresController extends Controller
      */
     public function update(Request $request, string $id)
     {
-<<<<<<< HEAD
     $cantidadinstructores = Instructores::where('iduser', $id)->count();
 
     if ($cantidadinstructores > 0) {
@@ -85,35 +84,6 @@ class InstructoresController extends Controller
             'FechaNacimiento' => $request->input('fechanacimiento'),
             'Correo' => $request->input('correo'),
         ]);
-=======
-        $cantidadinstructores = Instructores::where('iduser','=', $id)->count();
-        if($cantidadinstructores>0){
-            $instructores = Instructores::where('iduser','=', $id);
-            $instructores->update([
-                'iduser'=>request('codigo'),
-                'Nombres'=>request('nombres'),
-                'Apellidos'=>request('apellidos'),
-                'Contacto'=>request('contacto'),
-                'TipoDocumento'=>request('tipodocumento'),
-                'NumeroDocumento'=>request('numerodocumento'),
-                'FechaNacimiento'=>request('fechanacimiento'),
-                'Correo'=>request('correo')
-            ]);
-        }
-        else{
-            Instructores::create([
-                'iduser'=>request('codigo'),
-                'Nombres'=>request('nombres'),
-                'Apellidos'=>request('apellidos'),
-                'Contacto'=>request('contacto'),
-                'TipoDocumento'=>request('tipodocumento'),
-                'NumeroDocumento'=>request('numerodocumento'),
-                'FechaNacimiento'=>request('fechanacimiento'),
-                'Correo'=>request('correo')
-            ]);
-        }
-        return redirect()->route('dashboard');
->>>>>>> d955ad5d951e6f213250548a04193c1c9f88a39f
     }
 
     return redirect()->route('dashboard');
