@@ -1,10 +1,10 @@
 <x-form-section submit="updateProfileInformation">
     <x-slot name="title">
-        {{ __('Profile Information') }}
+        {{ __('Información del perfil') }}
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Update your account\'s profile information and email address.') }}
+        {{ __('Actualice la información del perfil y la dirección de correo electrónico de su cuenta.') }}
     </x-slot>
 
     <x-slot name="form">
@@ -54,14 +54,36 @@
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-label for="name" value="{{ __('Name') }}" />
+            <x-label for="name" value="{{ __('Nombre') }}" />
             <x-input id="name" type="text" class="mt-1 block w-full" wire:model="state.name" required autocomplete="name" />
             <x-input-error for="name" class="mt-2" />
         </div>
 
+        <!-- lastname -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="lastname" value="{{ __('Apellido') }}" />
+            <x-input id="lastname" type="text" class="mt-1 block w-full" wire:model="state.lastname" required autocomplete="lastname" />
+            <x-input-error for="lastname" class="mt-2" />
+        </div>
+
+        <!-- contacto -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="contacto" value="{{ __('Número de télefono') }}" />
+            <x-input id="contacto" type="number" class="mt-1 block w-full" wire:model="state.contacto" required autocomplete="contacto" />
+            <x-input-error for="contacto" class="mt-2" />
+        </div>
+
+        <!-- fechanacimiento-->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="fechanacimiento" value="{{ __('Fecha de nacimiento') }}" />
+            <x-input id="fechanacimiento" type="date" class="mt-1 block w-full" wire:model="state.fechanacimiento" required autocomplete="fechanacimiento" />
+            <x-input-error for="fechanacimiento" class="mt-2" />
+        </div>
+
+
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
-            <x-label for="email" value="{{ __('Email') }}" />
+            <x-label for="email" value="{{ __('Correo') }}" />
             <x-input id="email" type="email" class="mt-1 block w-full" wire:model="state.email" required autocomplete="username" />
             <x-input-error for="email" class="mt-2" />
 
@@ -85,11 +107,11 @@
 
     <x-slot name="actions">
         <x-action-message class="mr-3" on="saved">
-            {{ __('Saved.') }}
+            {{ __('Cambios realizados.') }}
         </x-action-message>
 
         <x-button wire:loading.attr="disabled" wire:target="photo">
-            {{ __('Save') }}
+            {{ __('Guardar') }}
         </x-button>
     </x-slot>
 </x-form-section>

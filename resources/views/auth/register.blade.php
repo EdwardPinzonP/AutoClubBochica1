@@ -12,8 +12,7 @@
             @csrf
 
             <div class="mt-4">
-                <label for="rol" class="col-md-4 col-form-label text-md-end">{{ __('Rol') }}</label>
-
+                <x-label for="name" value="{{ __('Rol') }}" />
                 <div class="mt-4">
                     <select name="rol" id="rol" class="block mt-1 w-full rounded" autofocus>
                         <option value="Aprendiz">Aprendiz</option>
@@ -22,14 +21,43 @@
                 </div>
             </div>
 
-            <div>
+            <div style="margin-top: 15px">
                 <x-label for="name" value="{{ __('Nombre') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+
+            <div style="margin-top: 15px">
+                <x-label for="lastname" value="{{ __('Apellido') }}" />
+                <x-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" required autofocus autocomplete="lastname" />
             </div>
 
             <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="tipodocumento" value="{{ __('Tipo de documento') }}" />
+                <select id="tipodocumento" class="block mt-1 w-full rounded" type="text" name="tipodocumento">
+                    <option value="Cédula de ciudadanía" >Cédula de ciudadanía</option>
+                    <option value="Tarjeta de identidad" >Tarjeta de identidad</option>
+                    <option value="Cédula de extranjería">Cédula de extranjería</option>
+                </select>                    
+            </div>
+
+            <div class="mt-4">
+                <x-label for="numerodocumento" value="{{ __('Número de documento') }}" />
+                <x-input id="numerodocumento" class="block mt-1 w-full" type="number" name="numerodocumento"/>
+            </div>
+
+            <div class="mt-4">
+                <x-label for="fechanacimiento" value="{{ __('Fecha de nacimiento') }}" />
+                <x-input id="fechanacimiento" class="block mt-1 w-full" type="date" name="fechanacimiento"/>
+            </div>
+
+            <div class="mt-4">
+                <x-label for="contacto" value="{{ __('Número de télefono') }}" />
+                <x-input id="contacto" class="block mt-1 w-full" type="number" name="contacto"/>
             </div>
 
             <div class="mt-4">

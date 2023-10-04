@@ -85,12 +85,11 @@
                             <option value="">Cédula de extranjería</option>
                         </select>
                     </div>
-
                     <div class="mt-4">
                         <x-label for="documento" value="{{ __('Número de documento') }}" />
                         <x-input id="documento" class="block mt-1 w-full" type="number" name="documento" required/>
                     </div>
-
+                    <div style="text-align: center; margin-top: 10px">Requisitos de inscripción</div>
                     <div class="mt-4">
                         <x-label for="fotodocumento" value="{{ __('Adjuntar documento') }}" />
                         <x-input id="fotodocumento" class="block mt-1 w-full" type="file" name="fotodocumento" required/>
