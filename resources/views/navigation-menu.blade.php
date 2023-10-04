@@ -16,8 +16,19 @@
                         {{ __('Inicio') }}
                     </x-nav-link>
                 </div>
+                @if(Auth::user()->rol=="Administrador")
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link href="" :active="request()->routeIs('dashboard')">
+                            {{ __('Listado instructores') }}
+                        </x-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link href="" :active="request()->routeIs('dashboard')">
+                            {{ __('Listado aprendices') }}
+                        </x-nav-link>
+                    </div>
+                @endif
             </div>
-
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
