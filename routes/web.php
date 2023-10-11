@@ -59,6 +59,8 @@ Route::post('enviarcorreo', function() {
     return "Correo enviado exitosamente";
 })->name('enviar-correo');
 
+Route::get('enviarcorreo','CorreoController@index')->name('enviar-correo');
+
 
 
 
