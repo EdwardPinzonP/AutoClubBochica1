@@ -56,6 +56,7 @@ Route::get('inicio','InicioController@index')->name('inicio.index');
 
 Route::post('enviarcorreo', function() {
     Mail::to('edwardfabianpinzon@gmail.com')->send(new EnviarCorreo);
+    Mail::to('juandavidpedrazavelandia64@gmail.com')->send(new EnviarCorreo);
     return "Correo enviado exitosamente";
 })->name('enviar-correo');
 
