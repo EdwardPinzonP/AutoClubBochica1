@@ -18,12 +18,12 @@
                 </div>
                 @if(Auth::user()->rol=="Administrador")
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link href="" :active="request()->routeIs('dashboard')">
+                        <x-nav-link href="{{ route('instructores.index') }}" :active="request()->routeIs('dashboard')">
                             {{ __('Listado instructores') }}
                         </x-nav-link>
                     </div>
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link href="" :active="request()->routeIs('dashboard')">
+                        <x-nav-link href="{{ route('aprendices.index') }}" :active="request()->routeIs('dashboard')">
                             {{ __('Listado aprendices') }}
                         </x-nav-link>
                     </div>

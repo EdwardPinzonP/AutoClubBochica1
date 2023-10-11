@@ -29,18 +29,25 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('participantes','AprendicesController@index')->name('aprendices.index');
+//rutas rol Administrador
+
+Route::get('index/listadoIns','InstructoresController@index')->name('instructores.index');
+Route::get('index/listadoApren','AprendicesController@index')->name('aprendices.index');
+Route::get('aprendiz/actualizar/{id}','AprendicesController@edit')->name('aprendices.edit');
+Route::get('aprendiz/update/{id}','AprendicesController@update')->name('aprendices.update');
+Route::get('instructor/editar/{id}','InstructoresController@edit')->name('instructores.edit');
+Route::get('instructor/update/{id}','InstructoresController@update')->name('instructores.update');
+Route::get('index/categoriaa2','CategoriaA2Controller@index')->name('categoriaA2.index');
+Route::get('index/categoriab1','CategoriaB1Controller@index')->name('categoriaB1.index');
+Route::get('index/categoriac1','CategoriaC1Controller@index')->name('categoriaC1.index');
+Route::get('index/categoriac2','CategoriaC2Controller@index')->name('categoriaC2.index');
+
+
+
+
 
 Route::get('pago','PagoController@index')->name('pago.index');
 
 Route::get('inscripcion','InscripcionController@index')->name('inscripcion.index');
 
 Route::get('inicio','InicioController@index')->name('inicio.index');
-
-Route::get('aprendiz/actualizar/{id}','App\Http\Controllers\AprendicesController@edit')->name('aprendices.edit');
-
-Route::get('aprendiz/update/{id}','App\Http\Controllers\AprendicesController@update')->name('aprendices.update');
-
-Route::get('instructor/actualizar/{id}','App\Http\Controllers\InstructoresController@edit')->name('instructores.edit');
-
-Route::get('instructor/update/{id}','App\Http\Controllers\InstructoresController@update')->name('instructores.update');

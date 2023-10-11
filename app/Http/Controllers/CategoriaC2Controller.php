@@ -3,17 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 
-class AprendicesController extends Controller
+class CategoriaC2Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $aprendices = User::where('rol', 'Aprendiz')->orderBy('lastname', 'ASC')->get();
-        return view('Administrador.listadoAprendices', ['aprendices'=>$aprendices]);
+        //
+        $nombreCategoria = 'Categoría C2';
+        $aprendices = User::select('users.name as nombre_aprendiz')
+            ->join('aprendices', 'users.id', '=', 'aprendices.iduser')
+            ->join('categorias', 'aprendices.Id_categoria', '=', 'categorias.Id_categoria')
+            ->where('categorias.Nombre', $nombreCategoria)
+            ->where('users.rol', 'Aprendiz')
+            ->get();
+
+        return view('Administrador/categorias.categoriac2', ['aprendices'=>$aprendices]);
     }
 
     /**
@@ -45,34 +52,16 @@ class AprendicesController extends Controller
      */
     public function edit(string $id)
     {
-        $aprendices = User::findOrFail($id);
-        return view('aprendices.edit', ['aprendices' => $aprendices]);
+        //
     }
-
 
     /**
      * Update the specified resource in storage.
      */
-
-// ...
-
     public function update(Request $request, string $id)
     {
-        $aprendices = User::findOrFail($id);
-        $aprendices->update([
-            'name' => request('nombres'),
-            'lastname' => request('apellidos'),
-            'contacto' => request('contacto'),
-            'fechanacimiento' => request('fechanacimiento'),
-            'TipoDocumento' => request('tipodocumento'),
-            'NumeroDocumento' => request('numerodocumento')
-        ]);
-
-        return redirect()->route('aprendices.index');
+        //
     }
-
-
-
 
     /**
      * Remove the specified resource from storage.

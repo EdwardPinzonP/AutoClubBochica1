@@ -11,92 +11,41 @@
             </div>
         @endif
 <div>
-    <form action=" {{route ('aprendices.update', Auth::user()->id) }})" method="put">
+    <form action=" {{route ('aprendices.update', $aprendices->id) }})" method="put">
         @csrf
-    @if($emp>0)
-            @foreach($aprendices as $emp)
-            <div  class="mt-4">
-                <label for="">Codigo usuario</label>
-                <input id="" class="block mt-1 w-full" name="codigo" type="text" value="{{$emp->iduser}}">
-            </div>
             <div  class="mt-4">
                 <label for="">Nombres</label>
-                <input id="" class="block mt-1 w-full" name="nombres" type="text" value="{{$emp->Nombres}}">
+                <input id="" class="block mt-1 w-full" name="nombres" type="text" value="{{$aprendices->name}}">
             </div>
             <div  class="mt-4">
                 <label for="">Apellidos</label>
-                <input id="" class="block mt-1 w-full" name="apellidos" type="text" value="{{$emp->Apellidos}}">
+                <input id="" class="block mt-1 w-full" name="apellidos" type="text" value="{{$aprendices->lastname}}">
             </div  class="mt-4">
             <div>
                 <label for="">Contacto</label>
-                <input id="" class="block mt-1 w-full" name="contacto" type="text" value="{{$emp->Contacto}}">
+                <input id="" class="block mt-1 w-full" name="contacto" type="text" value="{{$aprendices->contacto}}">
             </div>
             <div  class="mt-4">
                 <label for="">Fecha nacimiento</label>
-                <input type="date" class="block mt-1 w-full" name="fechanacimiento" id="" value="{{$emp->FechaNacimiento}}">
+                <input type="date" class="block mt-1 w-full" name="fechanacimiento" id="" value="{{$aprendices->fechanacimiento}}">
             </div>
             <div  class="mt-4">
-                <label for="">Correo</label>
-                <input id="" class="block mt-1 w-full" name="correo" type="text" value="{{$emp->Correo}}">
-            </div>
-            <div  class="mt-4">
-                <x-label for="tipodocumento" value="{{$emp->TipoDocumento}}"/>
+                <x-label for="tipodocumento" value="{{$aprendices->TipoDocumento}}"/>
                     <select id="" class="block mt-1 w-full" type="text" name="tipodocumento">
-                        <Option value="">Cédula de ciudadanía</Option>
-                        <option value="">Tarjeta de identidad</option>
-                        <option value="">Cédula de extranjería</option>
+                        <Option>Cédula de ciudadanía</Option>
+                        <option>Tarjeta de identidad</option>
+                        <option>Cédula de extranjería</option>
                     </select>
             </div>
             <div  class="mt-4">
                 <label for="">Número de documento</label>
-                <input type="number" name="numerodocumento" id="" class="block mt-1 w-full" value="{{$emp->NumeroDocumento}}">
+                <input type="number" name="numerodocumento" id="" class="block mt-1 w-full" value="{{$aprendices->NumeroDocumento}}">
             </div>
-            @endforeach
-    @else
-        <div  class="mt-4">
-            <label for="">Codigo usuario</label>
-            <input id="" class="block mt-1 w-full" name="codigo" type="text" value="{{ Auth::user()->id}}">
-        </div>
-        <div  class="mt-4">
-            <label for="">Nombres</label>
-            <input id="" class="block mt-1 w-full" name="nombres" type="text" value="{{ Auth::user()->Nombres}}" autofocus>
-        </div>
-        <div  class="mt-4">
-            <label for="">Apellidos</label>
-            <input id="" class="block mt-1 w-full" name="apellidos" type="text" value="{{ Auth::user()->Apellidos}}">
-        </div>
-        <div  class="mt-4">
-            <label for="">Contacto</label>
-            <input id="" class="block mt-1 w-full" name="contacto" type="text" value="{{ Auth::user()->Contacto}}">
-        </div>
-        <div  class="mt-4">
-            <label for="">Fecha nacimiento</label>
-            <input type="date" name="fechanacimiento" id="" class="block mt-1 w-full" value="{{ Auth::user()->FechaNacimiento}}">
-        </div>
-        <div  class="mt-4">
-            <label for="">Correo</label>
-            <input id="" class="block mt-1 w-full" name="correo" type="text" value="{{ Auth::user()->Correo}}">
-        </div>
-        <div >
-        <div class="mt-4">
-            <x-label for="TipoDocumento" value="{{ __('Tipo de documento') }}"/>
-                <select id="" class="block mt-1 w-full" type="text" name="tipodocumento" value="{{ Auth::user()->TipoDocumento}}">
-                    <Option value="Cédula de ciudadanía">Cédula de ciudadanía</Option>
-                    <option value="Tarjeta de identidad">Tarjeta de identidad</option>
-                    <option value="Cédula de extranjería">Cédula de extranjería</option>
-                </select>
-        </div>
-        <div class="mt-4">
-            <label for="">Número de documento</label>
-            <input type="number" name="numerodocumento" id="" class="block mt-1 w-full" value="{{ Auth::user()->NumeroDocumento}}">
-        </div>
-        <div class="flex items-center justify-center mt-4">
-                        
-            <x-button class="ml-4">
-                {{ __('Actualizar') }}
-            </x-button>
-        </div>
-    @endif
+            <div class="flex items-center justify-center mt-4">       
+                <x-button class="ml-4">
+                    {{ __('Actualizar') }}
+                </x-button>
+            </div>
 </div>
 </form>
 </x-authentication-card>

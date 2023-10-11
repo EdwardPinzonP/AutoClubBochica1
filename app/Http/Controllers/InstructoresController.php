@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Instructores;
+use App\Models\User;
 
 class InstructoresController extends Controller
 {
@@ -13,6 +13,8 @@ class InstructoresController extends Controller
     public function index()
     {
         //
+        $instructores = User::where('rol', 'Instructor')->get();
+        return view('Administrador.listadoInstructores', ['instructores' => $instructores]);
     }
 
     /**
@@ -44,50 +46,27 @@ class InstructoresController extends Controller
      */
     public function edit(string $id)
     {
-        $cantidadinstructores = Instructores::where('iduser','=',$id)->count();
-        if($cantidadinstructores>0){
-            $instructores = Instructores::where('iduser','=',$id)->get();
-            return view('instructores/edit',['instructores'=>$instructores])->with('emp',$cantidadinstructores);
-        }
-        else{
-            return view('instructores/edit')->with('emp',$cantidadinstructores);
-        }
+        $instructores = User::findOrFail($id);
+        return view('instructores/edit',['instructores'=>$instructores]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-    $cantidadinstructores = Instructores::where('iduser', $id)->count();
+        public function update(Request $request, string $id)
+        {
+            $instructores = User::findOrFail($id);
+            $instructores->update([
+                'name' => request('nombres'),
+                'lastname' => request('apellidos'),
+                'contacto' => request('contacto'),
+                'fechanacimiento' => request('fechanacimiento'),
+                'TipoDocumento' => request('tipodocumento'),
+                'NumeroDocumento' => request('numerodocumento')
+            ]);
 
-    if ($cantidadinstructores > 0) {
-        $instructores = Instructores::where('iduser', $id)->first();
-
-        $instructores->iduser = $request->input('codigo');
-        $instructores->Nombres = $request->input('nombres');
-        $instructores->Apellidos = $request->input('apellidos');
-        $instructores->Contacto = $request->input('contacto');
-        $instructores->TipoDocumento = $request->input('tipodocumento');
-        $instructores->NumeroDocumento = $request->input('numerodocumento');
-        $instructores->FechaNacimiento = $request->input('fechanacimiento');
-        $instructores->Correo = $request->input('correo');
-        $instructores->save();
-    } else {
-        Instructores::create([
-            'iduser' => $request->input('codigo'),
-            'Nombres' => $request->input('nombres'),
-            'Apellidos' => $request->input('apellidos'),
-            'Contacto' => $request->input('contacto'),
-            'TipoDocumento' => $request->input('tipodocumento'),
-            'NumeroDocumento' => $request->input('numerodocumento'),
-            'FechaNacimiento' => $request->input('fechanacimiento'),
-            'Correo' => $request->input('correo'),
-        ]);
-    }
-
-    return redirect()->route('dashboard');
-    }
+            return redirect()->route('instructores.index');
+        }
 
 
     /**
