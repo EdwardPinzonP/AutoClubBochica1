@@ -57,14 +57,14 @@ class InstructoresController extends Controller
         {
             $instructores = User::findOrFail($id);
             $instructores->update([
-                'name' => request('nombres'),
-                'lastname' => request('apellidos'),
-                'contacto' => request('contacto'),
-                'fechanacimiento' => request('fechanacimiento'),
-                'TipoDocumento' => request('tipodocumento'),
-                'NumeroDocumento' => request('numerodocumento')
+                'name' => $request->input('nombres'),
+                'lastname' => $request->input('apellidos'),
+                'contacto' => $request->input('contacto'),
+                'fechanacimiento' => $request->input('fechanacimiento'),
+                'TipoDocumento' => $request->input('tipodocumento'),
+                'NumeroDocumento' => $request->input('numerodocumento')
             ]);
-
+            
             return redirect()->route('instructores.index');
         }
 
