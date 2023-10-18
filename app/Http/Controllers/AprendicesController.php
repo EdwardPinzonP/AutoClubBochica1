@@ -64,8 +64,8 @@ class AprendicesController extends Controller
             'lastname' => request('apellidos'),
             'contacto' => request('contacto'),
             'fechanacimiento' => request('fechanacimiento'),
-            'TipoDocumento' => request('tipodocumento'),
-            'NumeroDocumento' => request('numerodocumento')
+            'tipodocumento' => request('tipodocumento'),
+            'numerodocumento' => request('numerodocumento')
         ]);
 
         return redirect()->route('aprendices.index');

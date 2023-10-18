@@ -61,8 +61,8 @@ class InstructoresController extends Controller
                 'lastname' => $request->input('apellidos'),
                 'contacto' => $request->input('contacto'),
                 'fechanacimiento' => $request->input('fechanacimiento'),
-                'TipoDocumento' => $request->input('tipodocumento'),
-                'NumeroDocumento' => $request->input('numerodocumento')
+                'tipodocumento' => $request->input('tipodocumento'),
+                'numerodocumento' => $request->input('numerodocumento')
             ]);
             
             return redirect()->route('instructores.index');
