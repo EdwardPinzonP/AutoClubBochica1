@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoriaB1Aprendices;
 use Illuminate\Http\Request;
 
-use App\Models\User;
-
-class CategoriaC2Controller extends Controller
+class CategoriaB1AprendicesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,15 +13,6 @@ class CategoriaC2Controller extends Controller
     public function index()
     {
         //
-        $nombreCategoria = 'Categoría C2';
-        $aprendices = User::select('users.name as nombre_aprendiz')
-            ->join('aprendices', 'users.id', '=', 'aprendices.iduser')
-            ->join('categorias', 'aprendices.Id_categoria', '=', 'categorias.Id_categoria')
-            ->where('categorias.Nombre', $nombreCategoria)
-            ->where('users.rol', 'Aprendiz')
-            ->get();
-
-        return view('Administrador/categorias.categoriac2', ['aprendices'=>$aprendices]);
     }
 
     /**
@@ -44,7 +34,7 @@ class CategoriaC2Controller extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(CategoriaB1Aprendices $categoriaB1Aprendices)
     {
         //
     }
@@ -52,7 +42,7 @@ class CategoriaC2Controller extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(CategoriaB1Aprendices $categoriaB1Aprendices)
     {
         //
     }
@@ -60,7 +50,7 @@ class CategoriaC2Controller extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, CategoriaB1Aprendices $categoriaB1Aprendices)
     {
         //
     }
@@ -68,7 +58,7 @@ class CategoriaC2Controller extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(CategoriaB1Aprendices $categoriaB1Aprendices)
     {
         //
     }

@@ -27,6 +27,11 @@
                             {{ __('Listado aprendices') }}
                         </x-nav-link>
                     </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link href="{{ route('usuarios.create') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Agregar Usuario') }}
+                        </x-nav-link>
+                    </div>
                 @endif
             </div>
             <div class="hidden sm:flex sm:items-center sm:ml-6">

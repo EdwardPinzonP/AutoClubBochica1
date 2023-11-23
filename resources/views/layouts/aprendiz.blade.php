@@ -47,7 +47,7 @@
                 <div class="curso">
                     <div><h2>{{ $categoria->Nombre}}</h2></div>
                     @if($categoria->Nombre=="Categoría A2")
-                        <div><img class="ca2" src="{{ asset('img/categoriaa2.png') }}" alt=""></div>
+                        <a href="{{ route('aprendices.categoriaA2') }}"><div><img class="ca2" src="{{ asset('img/categoriaa2.png') }}" alt=""></div></a>
                     @elseif($categoria->Nombre=="Categoría B1")
                         <div><img class="cb1" src="{{ asset('img/categoriab1.png') }}" alt=""></div>
                     @elseif($categoria->Nombre=="Categoría C1")

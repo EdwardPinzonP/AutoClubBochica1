@@ -43,9 +43,12 @@ Route::get('index/categoriaa2','CategoriaA2Controller@index')->name('categoriaA2
 Route::get('index/categoriab1','CategoriaB1Controller@index')->name('categoriaB1.index');
 Route::get('index/categoriac1','CategoriaC1Controller@index')->name('categoriaC1.index');
 Route::get('index/categoriac2','CategoriaC2Controller@index')->name('categoriaC2.index');
+Route::get('create/agregarusuario','CrearUsuariosController@create')->name('usuarios.create');
+Route::post('agregar/usuarios','CrearUsuariosController@store')->name('usuarios.store');
 
+//rutas rol aprendiz
 
-
+Route::get('index/categoriaa2','CategoriaA2AprendicesController@index')->name('aprendices.categoriaA2');
 
 
 Route::get('pago','PagoController@index')->name('pago.index');

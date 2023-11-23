@@ -35,7 +35,7 @@
         <div class="curso">
             <div><h2>{{ $categoria->Nombre}}</h2>
             @if($categoria->Nombre=="Categoría A2")
-                    <a href="{{ route('categoriaA2.index') }}">
+                    <a href="">
                         <div><img class="ca2" src="{{ asset('img/categoriaa2.png') }}" alt=""></div>
                         <p>Categoria A2 de motocicletas</p>
                     </a>

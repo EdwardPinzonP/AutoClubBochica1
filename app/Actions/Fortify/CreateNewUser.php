@@ -35,8 +35,7 @@ class CreateNewUser implements CreatesNewUsers
             'tipodocumento' => $input['tipodocumento'],
             'numerodocumento' => $input['numerodocumento'],
             'fechanacimiento' => $input['fechanacimiento'],
-            'contacto' => $input['contacto'],
-            'rol' => $input['rol']
+            'contacto' => $input['contacto']
         ]);
     }
 }
