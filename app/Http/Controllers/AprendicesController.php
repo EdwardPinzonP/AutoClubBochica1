@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Aprendices;
+use App\Models\Categorias;
 
 class AprendicesController extends Controller
 {
@@ -12,8 +14,12 @@ class AprendicesController extends Controller
      */
     public function index()
     {
-        $aprendices = User::where('rol', 'Aprendiz')->orderBy('lastname', 'ASC')->get();
-        return view('Administrador.listadoAprendices', ['aprendices'=>$aprendices]);
+        $aprendices = Aprendices::with('user:id,name,lastname,email,tipodocumento,numerodocumento,fechanacimiento,contacto')
+        ->with('categoria:Id_categoria,Nombre')
+        ->get(['Id_aprendiz', 'Id_categoria', 'iduser']);
+
+        return view('Administrador.listadoAprendices', ['aprendices' => $aprendices]);
+
     }
 
     /**
@@ -80,5 +86,18 @@ class AprendicesController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function buscarAprendiz(Request $request)
+    {
+        $numero_documento = $request->input('numero_documento');
+        
+        $aprendices = Aprendices::with('user', 'categoria')
+            ->whereHas('user', function ($query) use ($numero_documento) {
+                $query->where('numerodocumento', 'LIKE', '%' . $numero_documento . '%');
+            })
+            ->get();
+        
+        return view('Administrador.listadoAprendices', ['aprendices' => $aprendices]);
     }
 }

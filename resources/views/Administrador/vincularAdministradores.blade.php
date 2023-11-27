@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Categoría C1</title>
+        <title>Vincular Administradores</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,26 +17,6 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <style>
-        .info{
-            display: grid;
-            grid-template-columns: 20% 80%;
-            justify-content: center;
-            align-items: center;
-        }
-        .evidencias{
-            display: grid;
-            background: green;
-            border-radius: 5px;
-            width: 90%;
-            height: 30px;
-            justify-content: center;
-            margin: 0 auto;
-            margin-top: 10px;
-            margin-block-end: 10px;
-            color: white;
-        }
-    </style>
     <body class="font-sans antialiased">
         <x-banner />
 
@@ -55,22 +35,33 @@
             <x-app-layout>
                 <x-slot name="header">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        Categoría C1
+                        Vincular administradores a cursos
                     </h2>
                 </x-slot>
-            
-                <div class="py-12">
-                    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                        <div class="info">
-                            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                                <button class="evidencias">Evidencias</button>
-                                <button class="evidencias">Horario</button>
-                                <button class="evidencias">Calificaciones</button>
-                                <button class="evidencias">Compañeros</button>
-                            </div>
-                        </div>
+                <form method="POST" action="{{ route('vincularAdm.store') }}">
+                    @csrf
+                    <div style="margin-top: 15px">
+                        <x-label for="iduser" value="{{ __('Usuario') }}" />
+                        <select name="iduser" id="iduser">
+                            @foreach($administrador as $admin)
+                                <option value="{{ $admin->id }}">{{ $admin->name }} {{ $admin->lastname }}</option>
+                            @endforeach
+                        </select>
                     </div>
-                </div>
+                    <div style="margin-top: 15px">
+                        <x-label for="Id_categoria" value="{{ __('Categoria') }}" />
+                        <select name="Id_categoria" id="Id_categoria">
+                            @foreach($categorias as $curso)
+                                <option value="{{ $curso->Id_categoria }}">{{ $curso->Nombre }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div style="margin-top: 15px">
+                        <x-button class="ml-4">
+                            {{ __('Vincular administrador') }}
+                        </x-button>
+                    </div>
+                </form>
             </x-app-layout>
         </div>
 

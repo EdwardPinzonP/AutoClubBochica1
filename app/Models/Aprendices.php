@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Aprendices extends Model
 {
     use HasFactory;
-    protected $fillable = ['Id_aprendiz','Id_acudiente','Id_categoria','Id_curso','Nombres','Apellidos','Contacto','FechaNacimiento','Correo','TipoDocumento','NumeroDocumento','iduser'];
+    protected $fillable = ['Id_aprendiz','Id_categoria','iduser'];
     protected $primaryKey = 'Id_aprendiz';
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'iduser');
+    }
+
+    public function categoria()
+    {
+        return $this->belongsTo(Categorias::class, 'Id_categoria');
+    }
 }

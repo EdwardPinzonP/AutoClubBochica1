@@ -13,6 +13,7 @@ class CategoriaC1AprendicesController extends Controller
     public function index()
     {
         //
+        return view('aprendices.categoriac1');
     }
 
     /**

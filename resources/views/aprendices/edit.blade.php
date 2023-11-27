@@ -39,7 +39,7 @@
             </div>
             <div  class="mt-4">
                 <label for="">Número de documento</label>
-                <input type="number" name="numerodocumento" id="" class="block mt-1 w-full" value="{{$aprendices->NumeroDocumento}}">
+                <input type="number" name="numerodocumento" id="" class="block mt-1 w-full" value="{{$aprendices->numerodocumento}}">
             </div>
             <div class="flex items-center justify-center mt-4">       
                 <x-button class="ml-4">

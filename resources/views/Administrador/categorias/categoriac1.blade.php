@@ -42,6 +42,7 @@
                 <div class="py-12">
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                            <div>Aprendices</div>
                             <table>
                                 <tr style="text-align: center">
                                     <td>Nombre</td>
@@ -55,7 +56,39 @@
                                 </tr>
                                 @foreach($aprendices as $apren)
                                     <tr>
-                                        <td>{{ $apren->nombre_aprendiz }}</td>
+                                        <td>{{ $apren->name }}</td>
+                                        <td>{{ $apren->lastname }}</td>
+                                        <td>{{ $apren->email }}</td>
+                                        <td>{{ $apren->tipodocumento }}</td>
+                                        <td>{{ $apren->numerodocumento }}</td>
+                                        <td>{{ $apren->fechanacimiento }}</td>
+                                        <td>{{ $apren->contacto }}</td>
+                                        <td><a href="{{ route('categoriaC1.destroy' , $apren->Id_aprendiz) }}" onclick="return confirm('Esta seguro de desvincular este usuario de la categoría C1?')"><button>Eliminar del curso</button></a></td>
+                                    </tr>
+                                @endforeach
+                            </table>
+                            <div>Instructores</div>
+                            <table>
+                                <tr style="text-align: center">
+                                    <td>Nombre</td>
+                                    <td>Apellido</td>
+                                    <td>Correo</td>
+                                    <td>Tipo de documento</td>
+                                    <td>Numero de documento</td>
+                                    <td>Fecha de nacimiento</td>
+                                    <td>Contacto</td>
+                                    <td>Acción</td>
+                                </tr>
+                                @foreach($instructores as $profe)
+                                    <tr>
+                                        <td>{{ $profe->name }}</td>
+                                        <td>{{ $profe->lastname }}</td>
+                                        <td>{{ $profe->email }}</td>
+                                        <td>{{ $profe->tipodocumento }}</td>
+                                        <td>{{ $profe->numerodocumento }}</td>
+                                        <td>{{ $profe->fechanacimiento }}</td>
+                                        <td>{{ $profe->contacto }}</td>
+                                        <td><a href="{{ route('categoriaC1.destroyIns' , $profe->Id_instructor) }}" onclick="return confirm('Esta seguro de desvincular este usuario de la categoría C1?')"><button>Eliminar del curso</button></a></td>
                                     </tr>
                                 @endforeach
                             </table>

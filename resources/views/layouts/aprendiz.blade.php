@@ -43,20 +43,31 @@
             @if ($cursoDeConduccion)
             @foreach ($cursoDeConduccion as $categoria)
             @csrf
-            <a href="">
-                <div class="curso">
-                    <div><h2>{{ $categoria->Nombre}}</h2></div>
-                    @if($categoria->Nombre=="Categoría A2")
-                        <a href="{{ route('aprendices.categoriaA2') }}"><div><img class="ca2" src="{{ asset('img/categoriaa2.png') }}" alt=""></div></a>
+            <div class="curso">
+                <div><h2>{{ $categoria->Nombre}}</h2>
+                @if($categoria->Nombre=="Categoría A2")
+                        <a href="{{ route('aprendices.categoriaA2') }}">
+                            <div><img class="ca2" src="{{ asset('img/categoriaa2.png') }}" alt=""></div>
+                            <p>Categoria A2 de motocicletas</p>
+                        </a>
                     @elseif($categoria->Nombre=="Categoría B1")
-                        <div><img class="cb1" src="{{ asset('img/categoriab1.png') }}" alt=""></div>
+                        <a href="{{ route('aprendices.categoriaB1') }}">
+                            <div><img class="cb1" src="{{ asset('img/categoriab1.png') }}" alt=""></div>
+                            <p>Categoria B1 de automoviles particulares</p>
+                        </a>
                     @elseif($categoria->Nombre=="Categoría C1")
-                        <div><img class="cc1" src="{{ asset('img/categoriac1.png') }}" alt=""></div>
+                        <a href="{{ route('aprendices.categoriaC1') }}">
+                            <div><img class="cc1" src="{{ asset('img/categoriac1.png') }}" alt=""></div>
+                            <p>Categoria C1 de automoviles de servicio publico</p>
+                        </a>
                     @elseif($categoria->Nombre=="Categoría C2")
-                        <div><img class="cc2" src="{{ asset('img/categoriac2.png') }}" alt=""></div>
-                    @endif
+                        <a href="{{ route('aprendices.categoriaC2') }}">
+                            <div><img class="cc2" src="{{ asset('img/categoriac2.png') }}" alt=""></div>
+                            <p>Categoria C2 de Turbos</p>
+                        </a>
+                @endif
                 </div>
-            </a>
+            </div>
             @endforeach
         
             @else

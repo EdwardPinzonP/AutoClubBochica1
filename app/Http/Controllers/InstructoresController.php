@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Instructores;
 
 class InstructoresController extends Controller
 {
@@ -13,7 +14,10 @@ class InstructoresController extends Controller
     public function index()
     {
         //
-        $instructores = User::where('rol', 'Instructor')->get();
+        $instructores = Instructores::with('user:id,name,lastname,email,tipodocumento,numerodocumento,fechanacimiento,contacto')
+        ->with('categoria:Id_categoria,Nombre')
+        ->get(['Id_instructor', 'Id_categoria', 'iduser']);
+
         return view('Administrador.listadoInstructores', ['instructores' => $instructores]);
     }
 
@@ -75,5 +79,18 @@ class InstructoresController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function buscarInstructor(Request $request)
+    {
+        $numero_documento = $request->input('numero_documento');
+        
+        $instructores = Instructores::with('user', 'categoria')
+            ->whereHas('user', function ($query) use ($numero_documento) {
+                $query->where('numerodocumento', 'LIKE', '%' . $numero_documento . '%');
+            })
+            ->get();
+        
+        return view('Administrador.listadoInstructores', ['instructores' => $instructores]);
     }
 }

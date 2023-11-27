@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Listado Aprendices</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -38,7 +38,10 @@
                         Aprendices
                     </h2>
                 </x-slot>
-            
+                <form action="{{ route('buscarAprendiz') }}" method="GET">
+                    <input type="text" name="numero_documento" placeholder="Buscar por número de documento">
+                    <button type="submit">Buscar</button>
+                </form>
                 <div class="py-12">
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
@@ -51,18 +54,20 @@
                                     <td>Numero de documento</td>
                                     <td>Fecha de nacimiento</td>
                                     <td>Contacto</td>
+                                    <td>Categoria</td>
                                     <td>Acción</td>
                                 </tr>
                                 @foreach($aprendices as $apre)
                                     <tr style="text-align: center;">
-                                        <td>{{ $apre->name }}</td>
-                                        <td>{{ $apre->lastname }}</td>
-                                        <td>{{ $apre->email }}</td>
-                                        <td>{{ $apre->TipoDocumento }}</td>
-                                        <td>{{ $apre->NumeroDocumento }}</td>
-                                        <td>{{ $apre->fechanacimiento }}</td>
-                                        <td>{{ $apre->contacto }}</td>
-                                        <td><a href="{{ route('aprendices.edit', $apre->id) }}"><button>Editar</button></a></td>
+                                        <td>{{ $apre->user->name }}</td>
+                                        <td>{{ $apre->user->lastname }}</td>
+                                        <td>{{ $apre->user->email }}</td>
+                                        <td>{{ $apre->user->tipodocumento }}</td>
+                                        <td>{{ $apre->user->numerodocumento }}</td>
+                                        <td>{{ $apre->user->fechanacimiento }}</td>
+                                        <td>{{ $apre->user->contacto }}</td>
+                                        <td>{{ $apre->categoria->Nombre }}</td>
+                                        <td><a href="{{ route('aprendices.edit', $apre->user->id) }}"><button>Editar</button></a></td>
                                     </tr>
                                 @endforeach
                             </table>

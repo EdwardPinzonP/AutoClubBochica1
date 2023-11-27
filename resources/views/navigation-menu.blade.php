@@ -32,6 +32,21 @@
                             {{ __('Agregar Usuario') }}
                         </x-nav-link>
                     </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link href="{{ route('vincular') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Vincular Aprendices') }}
+                        </x-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link href="{{ route('vincularIns') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Vincular Instructores') }}
+                        </x-nav-link>
+                    </div>
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-nav-link href="{{ route('vincularAdm') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Vincular Administradores') }}
+                        </x-nav-link>
+                    </div>
                 @endif
             </div>
             <div class="hidden sm:flex sm:items-center sm:ml-6">

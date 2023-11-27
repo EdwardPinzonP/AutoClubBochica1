@@ -43,7 +43,7 @@
             </div>
             <div class="mt-4">
                 <label for="">Número de documento</label>
-                <input type="text" name="numerodocumento" id="" class="block mt-1 w-full" value="{{$instructores->NumeroDocumento}}">
+                <input type="text" name="numerodocumento" id="" class="block mt-1 w-full" value="{{$instructores->numerodocumento}}">
             </div>
             <div class="mt-4">
                 <label for="">Fecha nacimiento</label>
