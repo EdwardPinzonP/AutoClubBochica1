@@ -46,12 +46,12 @@
             <div class="curso">
                 <div><h2>{{ $categoria->Nombre}}</h2>
                 @if($categoria->Nombre=="Categoría A2")
-                        <a href="{{ route('aprendices.categoriaA2') }}">
+                        <a href="{{ route('evidencias.categoriaA2') }}">
                             <div><img class="ca2" src="{{ asset('img/categoriaa2.png') }}" alt=""></div>
                             <p>Categoria A2 de motocicletas</p>
                         </a>
                     @elseif($categoria->Nombre=="Categoría B1")
-                        <a href="{{ route('aprendices.categoriaB1') }}">
+                        <a href="{{ route('evidencias.categoriaB1') }}">
                             <div><img class="cb1" src="{{ asset('img/categoriab1.png') }}" alt=""></div>
                             <p>Categoria B1 de automoviles particulares</p>
                         </a>

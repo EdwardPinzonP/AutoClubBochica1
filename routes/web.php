@@ -65,10 +65,17 @@ Route::post('vincular/administradores','VincularAdministradores@store')->name('v
 
 //rutas rol aprendiz
 
-Route::get('index/categoriaa2','CategoriaA2AprendicesController@index')->name('aprendices.categoriaA2');
+Route::get('index/compañerosA2','CompañerosA2Controller@index')->name('compañerosA2');
+Route::get('index/evidenciasa2A','EvidenciasA2AprendicesController@index')->name('evidencias.categoriaA2');
+Route::get('index/crear2A','ResponderA2Controller@create')->name('responderA2.create');
+Route::post('index/responder2A','ResponderA2Controller@store')->name('responderA2.store');
+Route::get('index/calificacionesA2','CalificacionesA2Controller@index')->name('calificacionesA2');
 Route::get('index/categoriab1','CategoriaB1AprendicesController@index')->name('aprendices.categoriaB1');
+Route::get('index/compañerosB1','CompañerosB1Controller@index')->name('compañerosB1');
 Route::get('index/categoriac1','CategoriaC1AprendicesController@index')->name('aprendices.categoriaC1');
+Route::get('index/compañerosC1','CompañerosC1Controller@index')->name('compañerosC1');
 Route::get('index/categoriac2','CategoriaC2AprendicesController@index')->name('aprendices.categoriaC2');
+Route::get('index/compañerosC2','CompañerosC2Controller@index')->name('compañerosC2');
 Route::get('inicio','InicioController@index')->name('inicio.index');
 Route::post('enviarcorreo', function() {
     Mail::to('edwardfabianpinzon@gmail.com')->send(new EnviarCorreo);
@@ -77,6 +84,42 @@ Route::post('enviarcorreo', function() {
 })->name('enviar-correo');
 Route::get('enviarcorreo','CorreoController@index')->name('enviar-correo');
 
+//rutas rol instructor
 
-
-
+Route::post('index/categoriaia2/agregar','CategoriaA2InstructoresController@store')->name('evidenciasA2.store');
+Route::get('index/Evidenciasa2Edit/{id}','CategoriaA2InstructoresController@edit')->name('evidenciasA2.edit');
+Route::get('evidenciasA2/update/{id}','CategoriaA2InstructoresController@update')->name('evidenciasA2.update');
+Route::get('index/evidenciasa2','EvidenciasA2Controller@index')->name('evidenciasA2');
+Route::get('index/evidenciasa2/agregar','CategoriaA2InstructoresController@create')->name('evidenciasA2.create');
+Route::get('index/evidenciasAprenA2','EvidenciasAprendicesA2Controller@index')->name('evidenciasaprena2');
+Route::get('index/calificarAprenA2/{id}','EvidenciasAprendicesA2Controller@edit')->name('calificaraprena2');
+Route::get('index/guardarAprenA2/{id}','EvidenciasAprendicesA2Controller@update')->name('guardaraprena2');
+Route::get('/descargar-adjuntoa2/{id}', 'EvidenciasAprendicesA2Controller@descargar')->name('descargarA2.adjunto');
+Route::get('index/evidenciasb1','EvidenciasB1Controller@index')->name('evidenciasB1');
+Route::get('index/evidenciasAprenB1','EvidenciasAprendicesB1Controller@index')->name('evidenciasaprenb1');
+Route::get('index/evidenciasb1/agregar','CategoriaB1InstructoresController@create')->name('evidenciasB1.create');
+Route::post('index/evidenciasb1/guardar','CategoriaB1InstructoresController@store')->name('evidenciasB1.store');
+Route::get('index/Evidenciasb1Edit/{id}','CategoriaB1InstructoresController@edit')->name('evidenciasB1.edit');
+Route::get('evidenciasb1/update/{id}','CategoriaB1InstructoresController@update')->name('evidenciasB1.update');
+Route::get('index/calificarAprenb1/{id}','EvidenciasAprendicesB1Controller@edit')->name('calificaraprenb1');
+Route::get('/descargar-adjuntob1/{id}', 'EvidenciasAprendicesB1Controller@descargar')->name('descargarB1.adjunto');
+Route::get('index/guardarAprenB1/{id}','EvidenciasAprendicesB1Controller@update')->name('guardaraprenb1');
+Route::get('index/evidenciasc1','EvidenciasC1Controller@index')->name('evidenciasC1');
+Route::get('index/evidenciasc1/agregar','CategoriaC1InstructoresController@create')->name('evidenciasC1.create');
+Route::get('index/Evidenciasc1Edit/{id}','CategoriaC1InstructoresController@edit')->name('evidenciasC1.edit');
+Route::post('index/evidenciasc1/guardar','CategoriaC1InstructoresController@store')->name('evidenciasC1.store');
+Route::get('evidenciasc1/update/{id}','CategoriaC1InstructoresController@update')->name('evidenciasC1.update');
+Route::get('calificarC1/{id}','EvidenciasAprendicesC1Controller@edit')->name('calificaraprenc1');
+Route::get('index/evidenciasAprenC1','EvidenciasAprendicesC1Controller@index')->name('evidenciasaprenc1');
+Route::get('index/guardarAprenC1/{id}','EvidenciasAprendicesC1Controller@update')->name('guardaraprenc1');
+Route::get('index/calificarAprenc1/{id}','EvidenciasAprendicesC1Controller@edit')->name('calificaraprenc1');
+Route::get('/descargar-adjuntoc1/{id}', 'EvidenciasAprendicesC1Controller@descargar')->name('descargarC1.adjunto');
+Route::get('index/evidenciasc2','EvidenciasC2Controller@index')->name('evidenciasC2');
+Route::get('index/evidenciasc2/agregar','CategoriaC2InstructoresController@create')->name('evidenciasC2.create');
+Route::post('index/evidenciasc2/guardar','CategoriaC2InstructoresController@store')->name('evidenciasC2.store');
+Route::get('index/Evidenciasc2Edit/{id}','CategoriaC2InstructoresController@edit')->name('evidenciasC2.edit');
+Route::get('evidenciasc2/update/{id}','CategoriaC2InstructoresController@update')->name('evidenciasC2.update');
+Route::get('index/evidenciasAprenC2','EvidenciasAprendicesC2Controller@index')->name('evidenciasaprenc2');
+Route::get('index/guardarAprenC2/{id}','EvidenciasAprendicesC2Controller@update')->name('guardaraprenc2');
+Route::get('index/calificarAprenc2/{id}','EvidenciasAprendicesC2Controller@edit')->name('calificaraprenc2');
+Route::get('/descargar-adjuntoc2/{id}', 'EvidenciasAprendicesC2Controller@descargar')->name('descargarC2.adjunto');

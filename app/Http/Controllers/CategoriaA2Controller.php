@@ -12,12 +12,9 @@ use App\Models\Instructores;
 
 class CategoriaA2Controller extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
     public function index()
     {
-        //
         $nombreCategoria = 'Categoría A2';     
         $aprendices = User::select('name','lastname','email','tipodocumento','numerodocumento','fechanacimiento','contacto','aprendices.Id_aprendiz')
             ->join('aprendices', 'users.id', '=', 'aprendices.iduser')
@@ -35,49 +32,6 @@ class CategoriaA2Controller extends Controller
         return view('Administrador/categorias.categoriaa2', ['aprendices'=>$aprendices,'instructores'=>$instructores]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         $aprendices = Aprendices::findOrFail($id);

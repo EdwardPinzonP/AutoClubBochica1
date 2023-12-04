@@ -66,8 +66,9 @@
                                 <button class="evidencias">Evidencias</button>
                                 <button class="evidencias">Horario</button>
                                 <button class="evidencias">Calificaciones</button>
-                                <button class="evidencias">Compañeros</button>
+                                <a href="{{ route('compañerosC1') }}"><button class="evidencias">Compañeros</button></a>
                             </div>
+                            <div>Información</div>
                         </div>
                     </div>
                 </div>
