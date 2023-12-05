@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Categoría A2</title>
+        <title>Categoría C2</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -23,6 +23,23 @@
             grid-template-columns: 20% 80%;
             justify-content: center;
             align-items: center;
+        }
+        .evidencias{
+            display: grid;
+            background: green;
+            border-radius: 5px;
+            width: 90%;
+            height: 30px;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-block-end: 10px;
+            color: white;
+        }
+        .evidencia{
+            background: green;
+            width: 100%;
+            margin-top: 10px;
         }
     </style>
     <body class="font-sans antialiased">
@@ -43,7 +60,7 @@
             <x-app-layout>
                 <x-slot name="header">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        Calificaciones
+                        Evidencias
                     </h2>
                 </x-slot>
             
@@ -51,23 +68,27 @@
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="info">
                             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                                <a href="{{ route('evidencias.categoriaA2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
-                                <a href="{{ route('calificacionesA2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
-                                <a href="{{ route('compañerosA2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
+                                <a href="{{ route('evidencias.categoriaC2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
+                                <a href="{{ route('calificacionesC2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
+                                <a href="{{ route('compañerosC2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
                             <div>
-                                <table>
-                                    <tr>
-                                        <td>Descripción</td>
-                                        <td>Nota</td>
-                                    </tr>
-                                    @foreach($evidenciasCalificadas as $nota)
-                                    <tr>
-                                        <td>{{ $nota->evidencia->descripcion }}</td>
-                                        <td>{{ $nota->nota }}</td>
-                                    </tr>
+                                    @foreach($evidencias as $tareas)
+                                    <table class="evidencia">
+                                            <tr>
+                                                <td>Instructor</td>
+                                                <td>Fecha</td>
+                                                <td>Descripción</td>
+                                                <td>Adjuntar Evidencia</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ $tareas->name }} {{ $tareas->lastname }}</td>
+                                                <td>{{ $tareas->fechahora }}</td>
+                                                <td>{{ $tareas->descripcion }}</td>
+                                                <td><a href="{{ route('responderC2.create') }}"><button>Responder</button></a></td>
+                                            </tr>
+                                    </table>
                                     @endforeach
-                                </table>
                             </div>
                         </div>
                     </div>

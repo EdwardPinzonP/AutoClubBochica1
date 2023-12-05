@@ -70,11 +70,20 @@ Route::get('index/evidenciasa2A','EvidenciasA2AprendicesController@index')->name
 Route::get('index/crear2A','ResponderA2Controller@create')->name('responderA2.create');
 Route::post('index/responder2A','ResponderA2Controller@store')->name('responderA2.store');
 Route::get('index/calificacionesA2','CalificacionesA2Controller@index')->name('calificacionesA2');
-Route::get('index/categoriab1','CategoriaB1AprendicesController@index')->name('aprendices.categoriaB1');
+Route::get('index/evidenciasaB1','EvidenciasB1AprendicesController@index')->name('evidencias.categoriaB1');
+Route::get('index/crearB1','ResponderB1Controller@create')->name('responderB1.create');
+Route::post('index/responderB1','ResponderB1Controller@store')->name('responderB1.store');
+Route::get('index/calificacionesB1','CalificacionesB1Controller@index')->name('calificacionesB1');
 Route::get('index/compañerosB1','CompañerosB1Controller@index')->name('compañerosB1');
-Route::get('index/categoriac1','CategoriaC1AprendicesController@index')->name('aprendices.categoriaC1');
+Route::get('index/evidenciasaC1','EvidenciasC1AprendicesController@index')->name('evidencias.categoriaC1');
+Route::get('index/crearC1','ResponderC1Controller@create')->name('responderC1.create');
+Route::post('index/responderC1','ResponderC1Controller@store')->name('responderC1.store');
+Route::get('index/calificacionesC1','CalificacionesC1Controller@index')->name('calificacionesC1');
 Route::get('index/compañerosC1','CompañerosC1Controller@index')->name('compañerosC1');
-Route::get('index/categoriac2','CategoriaC2AprendicesController@index')->name('aprendices.categoriaC2');
+Route::get('index/evidenciasaC2','EvidenciasC2AprendicesController@index')->name('evidencias.categoriaC2');
+Route::get('index/calificacionesC2','CalificacionesC2Controller@index')->name('calificacionesC2');
+Route::get('index/crearC2','ResponderC2Controller@create')->name('responderC2.create');
+Route::post('index/responderC2','ResponderC2Controller@store')->name('responderC2.store');
 Route::get('index/compañerosC2','CompañerosC2Controller@index')->name('compañerosC2');
 Route::get('inicio','InicioController@index')->name('inicio.index');
 Route::post('enviarcorreo', function() {

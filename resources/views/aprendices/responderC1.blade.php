@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Categoría A2</title>
+        <title>Categoría C1</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -51,12 +51,12 @@
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="info">
                             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                                <a href="{{ route('evidencias.categoriaA2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
-                                <a href="{{ route('calificacionesA2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
-                                <a href="{{ route('compañerosA2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
+                                <a href="{{ route('evidencias.categoriaC1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
+                                <a href="{{ route('calificacionesC1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
+                                <a href="{{ route('compañerosC1') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
                             <div>
-                                <form action="{{ route('responderA2.store') }}" method="POST" enctype="multipart/form-data">
+                                <form action="{{ route('responderC1.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <label for="Id_evidencia">Seleccione la evidencia</label>
                                     <select name="Id_evidencia" id="Id_evidencia">

@@ -8,15 +8,15 @@ use App\Models\Evidencias;
 
 use App\Models\EvidenciasRespondidas;
 
-class ResponderA2Controller extends Controller
+class ResponderB1Controller extends Controller
 {
     public function create()
     {
         $evidencias = Evidencias::select('Id_evidencia', 'descripcion')
-            ->where('Id_categoria', 1)
+            ->where('Id_categoria', 2)
             ->get();
     
-        return view('aprendices.responderA2', ['evidencias' => $evidencias]);
+        return view('aprendices.responderB1', ['evidencias' => $evidencias]);
     }
     
     public function store(Request $request)
@@ -42,6 +42,6 @@ class ResponderA2Controller extends Controller
             'nota' => $request->input('nota'),
         ]);  
 
-        return redirect()->route('evidencias.categoriaA2');
+        return redirect()->route('evidencias.categoriaB1');
     }
 }

@@ -69,9 +69,8 @@
                         <div class="info">
                             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                                 <a href="{{ route('evidencias.categoriaA2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
-                                <a href=""><x-button style="width: 210px; margin-top: 10px; text-align:center" class="ml-4">{{ __('Horario') }}</x-button></a>
                                 <a href="{{ route('calificacionesA2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
-                                <a href="{{ route('compañerosA2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Compañeros') }}</x-button></a>
+                                <a href="{{ route('compañerosA2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
                             <div>
                                     @foreach($evidencias as $tareas)

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Categoría A2</title>
+        <title>Categoría C2</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -43,7 +43,7 @@
             <x-app-layout>
                 <x-slot name="header">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        Categoría A2
+                        Calificaciones
                     </h2>
                 </x-slot>
             
@@ -51,13 +51,23 @@
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="info">
                             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                                <a href="{{ route('evidencias.categoriaA2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
-                                <a href=""><x-button style="width: 210px; margin-top: 10px; text-align:center" class="ml-4">{{ __('Horario') }}</x-button></a>
-                                <a href="{{ route('calificacionesA2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
-                                <a href="{{ route('compañerosA2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Compañeros') }}</x-button></a>
+                                <a href="{{ route('evidencias.categoriaC2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
+                                <a href="{{ route('calificacionesC2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
+                                <a href="{{ route('compañerosC2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
                             <div>
-                                Información
+                                <table>
+                                    <tr>
+                                        <td>Descripción</td>
+                                        <td>Nota</td>
+                                    </tr>
+                                    @foreach($evidenciasCalificadas as $nota)
+                                    <tr>
+                                        <td>{{ $nota->evidencia->descripcion }}</td>
+                                        <td>{{ $nota->nota }}</td>
+                                    </tr>
+                                    @endforeach
+                                </table>
                             </div>
                         </div>
                     </div>

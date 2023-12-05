@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Categoría C1</title>
+        <title>Categoría B1</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -36,6 +36,11 @@
             margin-block-end: 10px;
             color: white;
         }
+        .evidencia{
+            background: green;
+            width: 100%;
+            margin-top: 10px;
+        }
     </style>
     <body class="font-sans antialiased">
         <x-banner />
@@ -55,7 +60,7 @@
             <x-app-layout>
                 <x-slot name="header">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        Categoría C1
+                        Evidencias
                     </h2>
                 </x-slot>
             
@@ -63,12 +68,28 @@
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="info">
                             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                                <button class="evidencias">Evidencias</button>
-                                <button class="evidencias">Horario</button>
-                                <button class="evidencias">Calificaciones</button>
-                                <a href="{{ route('compañerosC1') }}"><button class="evidencias">Compañeros</button></a>
+                                <a href="{{ route('evidencias.categoriaB1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
+                                <a href="{{ route('calificacionesB1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
+                                <a href="{{ route('compañerosB1') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
-                            <div>Información</div>
+                            <div>
+                                    @foreach($evidencias as $tareas)
+                                    <table class="evidencia">
+                                            <tr>
+                                                <td>Instructor</td>
+                                                <td>Fecha</td>
+                                                <td>Descripción</td>
+                                                <td>Adjuntar Evidencia</td>
+                                            </tr>
+                                            <tr>
+                                                <td>{{ $tareas->name }} {{ $tareas->lastname }}</td>
+                                                <td>{{ $tareas->fechahora }}</td>
+                                                <td>{{ $tareas->descripcion }}</td>
+                                                <td><a href="{{ route('responderB1.create') }}"><button>Responder</button></a></td>
+                                            </tr>
+                                    </table>
+                                    @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>

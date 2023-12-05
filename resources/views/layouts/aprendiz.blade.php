@@ -56,12 +56,12 @@
                             <p>Categoria B1 de automoviles particulares</p>
                         </a>
                     @elseif($categoria->Nombre=="Categoría C1")
-                        <a href="{{ route('aprendices.categoriaC1') }}">
+                        <a href="{{ route('evidencias.categoriaC1') }}">
                             <div><img class="cc1" src="{{ asset('img/categoriac1.png') }}" alt=""></div>
                             <p>Categoria C1 de automoviles de servicio publico</p>
                         </a>
                     @elseif($categoria->Nombre=="Categoría C2")
-                        <a href="{{ route('aprendices.categoriaC2') }}">
+                        <a href="{{ route('evidencias.categoriaC2') }}">
                             <div><img class="cc2" src="{{ asset('img/categoriac2.png') }}" alt=""></div>
                             <p>Categoria C2 de Turbos</p>
                         </a>

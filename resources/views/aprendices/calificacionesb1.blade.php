@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Categoría C2</title>
+        <title>Categoría B1</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -23,18 +23,6 @@
             grid-template-columns: 20% 80%;
             justify-content: center;
             align-items: center;
-        }
-        .evidencias{
-            display: grid;
-            background: green;
-            border-radius: 5px;
-            width: 90%;
-            height: 30px;
-            justify-content: center;
-            margin: 0 auto;
-            margin-top: 10px;
-            margin-block-end: 10px;
-            color: white;
         }
     </style>
     <body class="font-sans antialiased">
@@ -55,7 +43,7 @@
             <x-app-layout>
                 <x-slot name="header">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        Categoría C2
+                        Calificaciones
                     </h2>
                 </x-slot>
             
@@ -63,12 +51,24 @@
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="info">
                             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                                <button class="evidencias">Evidencias</button>
-                                <button class="evidencias">Horario</button>
-                                <button class="evidencias">Calificaciones</button>
-                                <a href="{{ route('compañerosC2') }}"><button class="evidencias">Compañeros</button></a>
+                                <a href="{{ route('evidencias.categoriaB1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
+                                <a href="{{ route('calificacionesB1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
+                                <a href="{{ route('compañerosB1') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
-                            <div>Información</div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>Descripción</td>
+                                        <td>Nota</td>
+                                    </tr>
+                                    @foreach($evidenciasCalificadas as $nota)
+                                    <tr>
+                                        <td>{{ $nota->evidencia->descripcion }}</td>
+                                        <td>{{ $nota->nota }}</td>
+                                    </tr>
+                                    @endforeach
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

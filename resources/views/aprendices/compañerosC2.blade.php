@@ -63,10 +63,9 @@
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="info">
                             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                                <button class="evidencias">Evidencias</button>
-                                <button class="evidencias">Horario</button>
-                                <button class="evidencias">Calificaciones</button>
-                                <a href="{{ route('compañerosC2') }}"><button class="evidencias">Compañeros</button></a>
+                                <a href="{{ route('evidencias.categoriaC2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
+                                <a href="{{ route('calificacionesC2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
+                                <a href="{{ route('compañerosC2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
                             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                                 <div>Aprendices</div>

@@ -14,7 +14,7 @@ class EvidenciasAprendicesA2Controller extends Controller
     public function index()
     {
 
-        $evidenciasAsignadas = EvidenciasRespondidas::join('aprendices', 'evidencias_respondidas.Id_aprendiz', '=', 'aprendices.Id_aprendiz')
+        $evidenciasAsignadas = EvidenciasRespondidas::join('aprendices', 'evidencias_respondidas.iduser', '=', 'aprendices.iduser')
         ->join('users', 'aprendices.iduser', '=', 'users.id')
         ->join('evidencias','evidencias_respondidas.Id_evidencia', '=', 'evidencias.Id_evidencia')
         ->join('categorias', 'aprendices.Id_categoria', '=', 'categorias.Id_categoria')

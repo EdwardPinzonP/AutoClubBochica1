@@ -8,7 +8,7 @@ use App\Models\User;
 
 use App\Models\EvidenciasRespondidas;
 
-class CalificacionesA2Controller extends Controller
+class CalificacionesC2Controller extends Controller
 {
     public function index()
     {
@@ -18,10 +18,11 @@ class CalificacionesA2Controller extends Controller
             ->where('iduser', $user->id)
             ->whereNotNull('nota')
             ->whereHas('evidencia', function ($query) {
-                $query->where('Id_categoria', 1);
+                $query->where('Id_categoria', 4);
             })
             ->get();
         
-        return view('aprendices.calificacionesa2', ['evidenciasCalificadas' => $evidenciasCalificadas]);
+        return view('aprendices.calificacionesc2', ['evidenciasCalificadas' => $evidenciasCalificadas]);
     }
+    
 }
