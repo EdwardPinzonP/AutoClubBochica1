@@ -58,7 +58,6 @@
                             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                                 <a href="{{ route('evidenciasB1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
                                 <a href="{{ route('evidenciasB1.create') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Agregar evidencia') }}</x-button></a>
-                                <a href=""><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Horario') }}</x-button></a>
                                 <a href="{{ route('evidenciasaprenb1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias aprendices') }}</x-button></a>
                                 <a href=""><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px;" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>

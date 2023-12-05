@@ -39,7 +39,6 @@ class ResponderA2Controller extends Controller
             'iduser' => $user->id,
             'Id_evidencia' => $request->input('Id_evidencia'),
             'adjunto' => $rutaAdjunto,
-            'nota' => $request->input('nota'),
         ]);  
 
         return redirect()->route('evidencias.categoriaA2');
