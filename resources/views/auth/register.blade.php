@@ -10,9 +10,6 @@
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
-            <div class="mt-4">
-                <h1 style="text-align: center; font-size: 30px; font-family:monospace">Regístrate a cursos ACB</h1>
-            </div>
             <div style="margin-top: 15px">
                 <x-label for="name" value="{{ __('Nombre') }}" />
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />

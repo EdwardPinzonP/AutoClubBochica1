@@ -17,6 +17,7 @@
             (--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selectio{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / va(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 /var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media(prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hove{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), va(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(va(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media(prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(1724 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighte{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30'fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 191374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3Csvg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var
             (--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400
             {--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}.menuInicio{display: grid;grid-template-columns: 50% 50%;height: auto;width: 100%;margin-top: 10px;margin-block-end: 10px;background-color: white}.logo{display: grid;grid-template-columns: 30% 70%}.imagenL{height: 100%; width: 90%;margin-top: 3px;margin-left: 3px}.contenido{display: grid;grid-template-rows: auto auto auto}.bnd{display: grid;grid-template-columns: 50% 25% 25%}.amarillo{border: 2px solid yellow}.azul{border: 2px solid blue}.rojo{border: 2px solid red}.nombre{text-align: right; font-size: 30px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif}.ubica{text-align: right;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px}.cond{text-align: right;font-family: cursive}.auten{text-align: right;margin-right: 20px;position: relative;top: 40%}.imagenF{height: auto;width: 100%;}.fnd{width: 100%;}footer{background-color: rgb(49, 49, 49); height: auto;text-align: center;color: white; height: 300px;position: relative;}footer p{position: absolute;bottom: 0;left: 0;right: 0;margin: 0;padding: 10px;}.cont{display: grid;grid-template-columns: 50% 50%;height: auto;}.tele{display: grid;grid-template-rows: auto auto auto}.teleuno{display: grid;grid-template-columns: 40% 60%;}.correo{position: absolute;bottom: 0;left: 0;right: 0;margin: 0;padding: 30px;font-size: 30px}
+            
         </style>
     </head>
     <body class="antialiased">
@@ -26,16 +27,16 @@
                     <img class="imagenL" src="{{ asset('img/ACB.png') }}" alt="">
                 </div>
                 <div class="contenido">
-                    <div><h2 class="nombre">AutoClub Bochica</h2></div>
+                    <div><h2 class="nombre font-semibold">AutoClub Bochica</h2></div>
                     <div>
-                        <h2 class="ubica">Escuela Automovilistica de Tunja</h2>
+                        <h2 class="ubica" style="font-family: Arial">Escuela Automovilistica de Tunja</h2>
                         <div class="bnd">
                             <div class="amarillo"></div>
                             <div class="azul"></div>
                             <div class="rojo"></div>
                         </div>
                     </div>
-                    <div><h2 class="cond">Conducción segura</h2></div>
+                    <div><h2 class="cond" style="font-family: Arial">Conducción segura</h2></div>
                 </div>
             </div>
             <div class="auten">
@@ -43,10 +44,10 @@
                     @auth
                         <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Inicio</a>
                     @else
-                        <a href="{{ route('login') }}" style="font-family: cursive">Iniciar Sesión</a>
+                        <a href="{{ route('login') }}" style="font-family: Arial">Iniciar Sesión</a>
                 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" style="margin-left: 20px;font-family:cursive">Regístrate</a>
+                            <a href="{{ route('register') }}" style="margin-left: 20px;font-family:Arial">Regístrate</a>
                         @endif
                     @endauth
                 @endif
@@ -54,11 +55,11 @@
         </div>
         <div class="imagenF">
             <div class="inf">
-                <h1 class="infor">¿Qué esperás para ser parte de nuestra escuela?</h1>
-                <h1 class="informa">¡Inscríbete ahora!</h1>
+                {{-- <h1 class="infor" style="font-family: Arial">¿Qué esperas para ser parte de nuestra escuela?</h1>
+                <h1 class="informa">¡Inscríbete ahora!</h1> --}}
             </div>
         </div>
-        <h1 class="cursos">Cursos</h1>
+        <h1 class="cursos" style="font-family: Arial">Cursos</h1>
         <div>
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="mt-16">
@@ -79,7 +80,9 @@
                                         En nuestra escuela de conducción, ofrecemos un completo programa de formación para la categoría A2, que se enfoca en motocicletas y ciclomotores. Si estás buscando obtener tu licencia para conducir estos vehículos de manera segura y confiada, nuestro equipo de instructores altamente capacitados está aquí para guiarte en cada paso del camino.
                                     </p>
                                 </div>
-                                <a href="{{ route('enviar-correo') }}"><button class="boton">¡Inscribete Ahora!</button></a>
+                                <a href="{{ route('enviar-correo') }}"><x-button class="ml-4">
+                                    {{ __('¡Inscríbete ahora!') }}
+                                </x-button></a>
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
@@ -98,7 +101,9 @@
                                         La categoría B1 en nuestra escuela de conducción te ofrece la oportunidad de aprender a manejar automóviles y vehículos ligeros de manera segura y eficiente. Esta categoría es ideal si estás buscando obtener tu licencia para conducir coches particulares, vehículos utilitarios deportivos (SUV) y otros vehículos ligeros.  
                                     </p>
                                 </div>
-                                <a href="{{  route('enviar-correo')  }}"><button class="boton">¡Inscribete Ahora!</button></a>
+                                <a href="{{  route('enviar-correo')  }}"><x-button class="ml-4">
+                                    {{ __('¡Inscríbete ahora!') }}
+                                </x-button></a>
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
@@ -117,7 +122,9 @@
                                         La categoría C1 de nuestra escuela de conducción se enfoca en prepararte para manejar vehículos de carga ligera y transporte de personas. Si estás interesado en expandir tus habilidades de conducción y adquirir el conocimiento necesario para operar vehículos más grandes y versátiles, esta categoría es ideal para ti.
                                     </p>
                                 </div>
-                                <a href="{{ route('enviar-correo') }}"><button class="boton">¡Inscribete Ahora!</button></a>
+                                <a href="{{ route('enviar-correo') }}"><x-button class="ml-4">
+                                    {{ __('¡Inscríbete ahora!') }}
+                                </x-button></a>
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
@@ -136,7 +143,9 @@
                                         La categoría C2 en nuestra escuela de conducción está diseñada para aquellos que desean adquirir las habilidades necesarias para operar vehículos comerciales medianos de manera segura y competente. Si tienes aspiraciones en el ámbito del transporte de carga o servicios de reparto, esta categoría es ideal para ti.
                                     </p>
                                 </div>
-                                <a href="{{ route('enviar-correo') }}"><button class="boton">¡Inscribete Ahora!</button></a>
+                                <a href="{{ route('enviar-correo') }}"><x-button class="ml-4">
+                                    {{ __('¡Inscríbete ahora!') }}
+                                </x-button></a>
                             </div>
                         </div>
                     </div>

@@ -12,10 +12,6 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-            <div class="mt-4">
-                <h1 style="text-align: center; font-size: 30px; font-family:monospace">Ingresa a cursos ACB</h1>
-            </div>
-
             <div>
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
