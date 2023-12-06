@@ -14,13 +14,14 @@ class EvidenciasAprendicesC1Controller extends Controller
     public function index()
     {
 
-        $evidenciasAsignadas = EvidenciasRespondidas::join('aprendices', 'evidencias_respondidas.Id_aprendiz', '=', 'aprendices.Id_aprendiz')
-        ->join('users', 'aprendices.iduser', '=', 'users.id')
-        ->join('evidencias','evidencias_respondidas.Id_evidencia', '=', 'evidencias.Id_evidencia')
-        ->join('categorias', 'aprendices.Id_categoria', '=', 'categorias.Id_categoria')
-        ->select('evidencias_respondidas.*', 'aprendices.*', 'users.*', 'evidencias.*','categorias.*')
-        ->where('aprendices.Id_categoria', '=',3)
-        ->get();
+        $evidenciasAsignadas = EvidenciasRespondidas::
+        join('categorias', 'evidencias_respondidas.Id_categoria', '=', 'categorias.Id_categoria')
+        ->join('users', 'evidencias_respondidas.iduser', '=', 'users.id')
+        ->join('evidencias', 'evidencias_respondidas.Id_evidencia', '=', 'evidencias.Id_evidencia')
+        ->select('evidencias_respondidas.*', 'users.*', 'evidencias.*')
+        ->where('categorias.Id_categoria', 3)
+        ->get(); 
+
         return view('instructores.evidenciasAprenc1', ['evidenciasAsignadas' => $evidenciasAsignadas]);
     }
 

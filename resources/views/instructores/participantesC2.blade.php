@@ -43,9 +43,10 @@
             <x-app-layout>
                 <x-slot name="header">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        Evidencias aprendices
+                        Participantes
                     </h2>
                 </x-slot>
+            
                 <div class="py-12">
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="info">
@@ -56,25 +57,29 @@
                                 <a href="{{ route('participantesC2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px;" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
                             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                                <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                                    @foreach($evidenciasAsignadas as $tarea)
-                                        <div class="bg-white overflow-hidden shadow-md rounded-lg">
-                                            <div class="px-4 py-5 sm:p-6">
-                                                <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ $tarea->name }} {{ $tarea->lastname }}</h3>
-                                                <p class="text-sm text-gray-600 mb-4">{{ $tarea->descripcion }}</p>
-                                                <p class="text-sm text-gray-600 mb-4">{{ $tarea->adjunto }}</p>
-                                                <p class="text-sm text-gray-600 mb-4">{{ $tarea->nota }}</p>
-                                            </div>
-                                            <div class="bg-gray-100 px-4 py-4 sm:px-6">
-                                                <a href="{{ route('descargarC2.adjunto', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900">Descargar</a>
-                                            </div>
-                                            <div class="bg-gray-100 px-4 py-4 sm:px-6">
-                                                <a href="{{ route('calificaraprenc2', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900">Calificar</a>
-                                            </div>
-                                        </div>
+                                <table>
+                                    <tr style="text-align: center">
+                                        <td>Nombre</td>
+                                        <td>Apellido</td>
+                                        <td>Correo</td>
+                                        <td>Tipo de documento</td>
+                                        <td>Numero de documento</td>
+                                        <td>Fecha de nacimiento</td>
+                                        <td>Contacto</td>
+                                    </tr>
+                                    @foreach($aprendices as $apren)
+                                        <tr>
+                                            <td>{{ $apren->name }}</td>
+                                            <td>{{ $apren->lastname }}</td>
+                                            <td>{{ $apren->email }}</td>
+                                            <td>{{ $apren->tipodocumento }}</td>
+                                            <td>{{ $apren->numerodocumento }}</td>
+                                            <td>{{ $apren->fechanacimiento }}</td>
+                                            <td>{{ $apren->contacto }}</td>
+                                        </tr>
                                     @endforeach
-                                </div>
-                            </div>
+                                </table>
+                            </div> 
                         </div>
                     </div>
                 </div>

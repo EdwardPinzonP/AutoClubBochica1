@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class EvidenciasRespondidas extends Model
 {
     use HasFactory;
-    protected $fillable = ['Id_evidenciaR','iduser','Id_evidencia','adjunto','nota'];
+    protected $fillable = ['Id_evidenciaR','Id_categoria', 'iduser','Id_evidencia','adjunto','nota'];
     protected $primaryKey = 'Id_evidenciaR';
 
     public function evidencia()

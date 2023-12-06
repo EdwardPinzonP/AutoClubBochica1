@@ -54,7 +54,7 @@
                                 <a href="{{ route('evidenciasC1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
                                 <a href="{{ route('evidenciasC1.create') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Agregar evidencia') }}</x-button></a>
                                 <a href="{{ route('evidenciasaprenc1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias aprendices') }}</x-button></a>
-                                <a href=""><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px;" class="ml-4">{{ __('Participantes') }}</x-button></a>
+                                <a href="{{ route('participantesC1') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px;" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
                             <div style="width: 50%; margin: 0 auto;">
                                 <form method="PUT" action="{{ route('evidenciasC1.update', $evidencias->Id_evidencia) }}" style="border: 1px solid #ddd; padding: 20px; border-radius: 5px;">

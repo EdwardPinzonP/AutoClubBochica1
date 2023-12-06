@@ -53,7 +53,7 @@
                                 <a href="{{ route('evidenciasC2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias') }}</x-button></a>
                                 <a href="{{ route('evidenciasC2.create') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Agregar evidencia') }}</x-button></a>
                                 <a href="{{ route('evidenciasaprenc2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias aprendices') }}</x-button></a>
-                                <a href=""><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px;" class="ml-4">{{ __('Participantes') }}</x-button></a>
+                                <a href="{{ route('participantesC2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px;" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
                             <div class="max-w-md mx-auto py-6 px-4 sm:px-6 lg:px-8">
                                 <form method="PUT" action="{{ route('guardaraprenc2', $evidencias->Id_evidenciaR) }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">

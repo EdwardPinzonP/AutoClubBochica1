@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Categoría C2</title>
+        <title>Categoría C1</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -43,9 +43,10 @@
             <x-app-layout>
                 <x-slot name="header">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                        Calificar
+                        Participantes
                     </h2>
                 </x-slot>
+            
                 <div class="py-12">
                     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                         <div class="info">
@@ -55,23 +56,30 @@
                                 <a href="{{ route('evidenciasaprenc1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Evidencias aprendices') }}</x-button></a>
                                 <a href="{{ route('participantesC1') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px;" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
-                            <div class="max-w-md mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                                <form method="PUT" action="{{ route('guardaraprenc1', $evidencias->Id_evidenciaR) }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                                    @csrf
-                                    <div class="mb-4">
-                                        <label for="nota" class="block text-gray-700 text-sm font-bold mb-2">Nota</label>
-                                        <div class="relative">
-                                            <select name="nota" id="nota" class="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-gray-500">
-                                                <option value="A">A</option>
-                                                <option value="R">R</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Calificar</button>
-                                    </div>
-                                </form>
-                            </div>
+                            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                                <table>
+                                    <tr style="text-align: center">
+                                        <td>Nombre</td>
+                                        <td>Apellido</td>
+                                        <td>Correo</td>
+                                        <td>Tipo de documento</td>
+                                        <td>Numero de documento</td>
+                                        <td>Fecha de nacimiento</td>
+                                        <td>Contacto</td>
+                                    </tr>
+                                    @foreach($aprendices as $apren)
+                                        <tr>
+                                            <td>{{ $apren->name }}</td>
+                                            <td>{{ $apren->lastname }}</td>
+                                            <td>{{ $apren->email }}</td>
+                                            <td>{{ $apren->tipodocumento }}</td>
+                                            <td>{{ $apren->numerodocumento }}</td>
+                                            <td>{{ $apren->fechanacimiento }}</td>
+                                            <td>{{ $apren->contacto }}</td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                            </div> 
                         </div>
                     </div>
                 </div>

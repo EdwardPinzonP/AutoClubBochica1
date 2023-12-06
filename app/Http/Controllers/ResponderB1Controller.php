@@ -37,9 +37,9 @@ class ResponderB1Controller extends Controller
 
         EvidenciasRespondidas::create([
             'iduser' => $user->id,
+            'Id_categoria' => 2,
             'Id_evidencia' => $request->input('Id_evidencia'),
             'adjunto' => $rutaAdjunto,
-            'nota' => $request->input('nota'),
         ]);  
 
         return redirect()->route('evidencias.categoriaB1');

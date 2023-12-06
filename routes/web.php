@@ -104,6 +104,16 @@ Route::get('index/evidenciasAprenA2','EvidenciasAprendicesA2Controller@index')->
 Route::get('index/calificarAprenA2/{id}','EvidenciasAprendicesA2Controller@edit')->name('calificaraprena2');
 Route::get('index/guardarAprenA2/{id}','EvidenciasAprendicesA2Controller@update')->name('guardaraprena2');
 Route::get('/descargar-adjuntoa2/{id}', 'EvidenciasAprendicesA2Controller@descargar')->name('descargarA2.adjunto');
+
+
+
+Route::get('index/participantesA2', 'ParticipantesA2Controller@index')->name('participantesA2');
+Route::get('index/participantesB1', 'ParticipantesB1Controller@index')->name('participantesB1');
+Route::get('index/participantesC1', 'ParticipantesC1Controller@index')->name('participantesC1');
+Route::get('index/participantesC2', 'ParticipantesC2Controller@index')->name('participantesC2');
+
+
+
 Route::get('index/evidenciasb1','EvidenciasB1Controller@index')->name('evidenciasB1');
 Route::get('index/evidenciasAprenB1','EvidenciasAprendicesB1Controller@index')->name('evidenciasaprenb1');
 Route::get('index/evidenciasb1/agregar','CategoriaB1InstructoresController@create')->name('evidenciasB1.create');

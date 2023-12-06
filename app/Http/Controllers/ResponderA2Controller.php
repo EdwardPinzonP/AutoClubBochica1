@@ -37,6 +37,7 @@ class ResponderA2Controller extends Controller
 
         EvidenciasRespondidas::create([
             'iduser' => $user->id,
+            'Id_categoria' => 1,
             'Id_evidencia' => $request->input('Id_evidencia'),
             'adjunto' => $rutaAdjunto,
         ]);  
