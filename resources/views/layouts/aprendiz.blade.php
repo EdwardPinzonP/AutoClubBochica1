@@ -5,12 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Inicio || Aprendiz</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="{{ asset('css/inicio.css') }}">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -19,6 +18,124 @@
         @livewireStyles
     </head>
     <body>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                margin: 0;
+            }
+
+            footer {
+                margin-top: 10%;
+                color: rgb(102, 102, 102);
+                padding: 10px;
+                text-align: center;
+            }
+
+            .cursos{
+                display: grid;
+                grid-template-columns: 30% 70%;
+                width: 150px;
+                height: 30px;
+                margin-left: 5%;
+            }
+
+            .cont {
+                padding: 20px;
+                background-color: #f0f0f0;
+                margin: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .cursos {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            .cursos div {
+                margin-right: 10px;
+            }
+
+            .cursos svg {
+                width: 25px;
+                height: 25px;
+                fill: currentColor;
+            }
+
+            .cursos h3 {
+                font-family: cursive;
+                font-size: 20px;
+            }
+
+            .curso {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 20px;
+                margin-bottom: 20px;
+                margin-left: 25px;
+                height: 350px;
+                margin-top: 10px;
+            }
+
+            .ca2{
+                height: 100px;
+                width: 100px;
+                margin: 0 auto;
+            }
+
+            .cb1{
+                height: 100px;
+                width: 150px;
+                margin: 0 auto;
+            }
+
+            .cc1{
+                height: 100px;
+                width: 150px;
+                margin: 0 auto;
+            }
+
+            .cc2{
+                height: 100px;
+                width: 150px;
+                margin: 0 auto;
+            }
+
+            .curso h2 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .curso div {
+                margin-bottom: 10px;
+            }
+
+            .sin-curso {
+                background-color: #fff;
+                border: 1px solid #ccc;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .sin-curso p {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .conta{
+                margin: 0 auto;
+                width: 95%;
+                text-align: center;
+                display: grid;
+                grid-template-columns: 20% 20% 20% 20%;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
         <div class="cursos">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25   " fill="currentColor" class="bi bi-journal-album" viewBox="0 0 16 16">
