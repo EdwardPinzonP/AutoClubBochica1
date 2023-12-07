@@ -62,12 +62,12 @@
         .curso {
             background-color: #fff;
             border: 1px solid #ccc;
-            border-radius: 5px;
             padding: 20px;
             margin-bottom: 20px;
             margin-left: 25px;
-            height: 350px;
+            height: 200px;
             margin-top: 10px;
+            border-radius: 8px;
         }
 
         .ca2{
@@ -99,9 +99,34 @@
             font-weight: bold;
         }
 
-        .curso div {
-            margin-bottom: 10px;
-        }
+
+.categoria-container {
+    text-align: center;
+    transition: box-shadow ease;
+}
+
+.categoria-container h2 {
+    margin-bottom: 10px;
+}
+
+.categoria-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.categoria-link:hover img {
+    opacity: 0.8;
+}
+
+.categoria-link p {
+    margin-top: 10px;
+}
+
+.categoria-container:hover {
+    box-shadow: 0 0 10px rgba(134, 134, 134, 0.959); /* Cambia el color o tamaño según prefieras */
+}rgba(121, 121, 121, 0.959)
+
 
         .sin-curso {
             background-color: #fff;
@@ -150,30 +175,32 @@
         @foreach ($cursoDeConduccion as $categoria)
         @csrf
         <div class="curso">
-            <div><h2>{{ $categoria->Nombre}}</h2>
-            @if($categoria->Nombre=="Categoría A2")
-                    <a href="{{ route('categoriaA2') }}">
+            <div class="categoria-container">
+                <h2>{{ $categoria->Nombre}}</h2>
+                @if($categoria->Nombre=="Categoría A2")
+                    <a href="{{ route('categoriaA2') }}" class="categoria-link">
                         <div><img class="ca2" src="{{ asset('img/categoriaa2.png') }}" alt=""></div>
-                        <p>Categoria A2 de motocicletas</p>
+                        <p class="mt-4 text-gray-500 text-sm leading-relaxed">Inspeccionar</p>
                     </a>
                 @elseif($categoria->Nombre=="Categoría B1")
-                    <a href="{{ route('categoriaB1.index') }}">
+                    <a href="{{ route('categoriaB1.index') }}" class="categoria-link">
                         <div><img class="cb1" src="{{ asset('img/categoriab1.png') }}" alt=""></div>
-                        <p>Categoria B1 de automoviles particulares</p>
+                        <p class="mt-4 text-gray-500 text-sm leading-relaxed">Inspeccionar</p>
                     </a>
                 @elseif($categoria->Nombre=="Categoría C1")
-                    <a href="{{ route('categoriaC1.index') }}">
+                    <a href="{{ route('categoriaC1.index') }}" class="categoria-link">
                         <div><img class="cc1" src="{{ asset('img/categoriac1.png') }}" alt=""></div>
-                        <p>Categoria C1 de automoviles de servicio publico</p>
+                        <p class="mt-4 text-gray-500 text-sm leading-relaxed">Inspeccionar</p>
                     </a>
                 @elseif($categoria->Nombre=="Categoría C2")
-                    <a href="{{ route('categoriaC2.index') }}">
+                    <a href="{{ route('categoriaC2.index') }}" class="categoria-link">
                         <div><img class="cc2" src="{{ asset('img/categoriac2.png') }}" alt=""></div>
-                        <p>Categoria C2 de Turbos</p>
+                        <p class="mt-4 text-gray-500 text-sm leading-relaxed">Inspeccionar</p>
                     </a>
-            @endif
+                @endif
             </div>
         </div>
+        
         @endforeach
         @else
             <div class="sin-curso">

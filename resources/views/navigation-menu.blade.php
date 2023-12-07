@@ -17,37 +17,29 @@
                     </x-nav-link>
                 </div>
                 @if(Auth::user()->rol=="Administrador")
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link href="{{ route('instructores.index') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Listado instructores') }}
-                        </x-nav-link>
-                    </div>
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link href="{{ route('aprendices.index') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Listado aprendices') }}
-                        </x-nav-link>
-                    </div>
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link href="{{ route('usuarios.create') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Agregar Usuario') }}
-                        </x-nav-link>
-                    </div>
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link href="{{ route('vincular') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Vincular Aprendices') }}
-                        </x-nav-link>
-                    </div>
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link href="{{ route('vincularIns') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Vincular Instructores') }}
-                        </x-nav-link>
-                    </div>
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link href="{{ route('vincularAdm') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Vincular Administradores') }}
-                        </x-nav-link>
-                    </div>
+                <div class="hidden sm:flex sm:ml-10 space-x-4">
+                    <x-nav-link href="{{ route('instructores.index') }}" :active="request()->routeIs('instructores.index')">
+                        {{ __('Listado instructores') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('aprendices.index') }}" :active="request()->routeIs('aprendices.index')">
+                        {{ __('Listado aprendices') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('usuarios.create') }}" :active="request()->routeIs('usuarios.create')">
+                        {{ __('Agregar Usuario') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('vincular') }}" :active="request()->routeIs('vincular')">
+                        {{ __('Vincular Aprendices') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('vincularIns') }}" :active="request()->routeIs('vincularIns')">
+                        {{ __('Vincular Instructores') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('vincularAdm') }}" :active="request()->routeIs('vincularAdm')">
+                        {{ __('Vincular Administradores') }}
+                    </x-nav-link>
+                </div>
                 @endif
+            
+            
             </div>
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Teams Dropdown -->
