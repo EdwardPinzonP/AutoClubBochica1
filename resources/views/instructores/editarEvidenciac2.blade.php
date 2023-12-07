@@ -24,6 +24,12 @@
             justify-content: center;
             align-items: center;
         }
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
     </style>
     <body class="font-sans antialiased">
         <x-banner />
@@ -62,7 +68,7 @@
                                     <label for="descripcion" style="display: block; margin-bottom: 10px;">Descripción</label>
                                     <input type="text" name="descripcion" id="descripcion" value="{{ $evidencias->descripcion }}" style="padding: 8px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;">
                                     <div style="text-align: center;">
-                                        <button type="submit" style="padding: 8px 16px; background-color: #008CBA; color: white; border: none; border-radius: 3px; cursor: pointer;">Actualizar</button>
+                                        <button type="submit" style="padding: 8px 16px; background-color: #00182c; color: white; border: none; border-radius: 3px; cursor: pointer;">Actualizar</button>
                                     </div>
                                 </form>
                             </div> 

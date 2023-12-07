@@ -24,6 +24,12 @@
             justify-content: center;
             align-items: center;
         }
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
     </style>
     <body class="font-sans antialiased">
         <x-banner />
@@ -66,7 +72,9 @@
                                             <p class="text-sm text-gray-700">{{ $tarea->descripcion }}</p>
                                         </div>
                                         <div class="bg-gray-100 px-4 py-4 sm:px-6">
-                                            <a href="{{ route('evidenciasA2.edit', $tarea->Id_evidencia) }}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
+                                            <a href="{{ route('evidenciasA2.edit', $tarea->Id_evidencia) }}" class="text-indigo-600 hover:text-indigo-900"><x-button class="ml-3">
+                                                {{ __('Editar') }}
+                                            </x-button></a>
                                         </div>
                                     </div>
                                     @endforeach

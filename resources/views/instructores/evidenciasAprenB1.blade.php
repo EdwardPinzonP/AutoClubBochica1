@@ -24,6 +24,12 @@
             justify-content: center;
             align-items: center;
         }
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
     </style>
     <body class="font-sans antialiased">
         <x-banner />
@@ -66,10 +72,14 @@
                                                 <p class="text-sm text-gray-600 mb-4">{{ $tarea->nota }}</p>
                                             </div>
                                             <div class="bg-gray-100 px-4 py-4 sm:px-6">
-                                                <a href="{{ route('descargarB1.adjunto', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900">Descargar</a>
+                                                <a href="{{ route('descargarB1.adjunto', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900"><x-button class="btn-correo">
+                                                    {{ __('Descargar') }}
+                                                </x-button></a>
                                             </div>
                                             <div class="bg-gray-100 px-4 py-4 sm:px-6">
-                                                <a href="{{ route('calificaraprenb1', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900">Calificar</a>
+                                                <a href="{{ route('calificaraprenb1', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900"><x-button class="btn-correo">
+                                                    {{ __('Calificar') }}
+                                                </x-button></a>
                                             </div>
                                         </div>
                                     @endforeach

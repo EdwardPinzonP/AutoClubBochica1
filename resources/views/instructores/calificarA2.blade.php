@@ -24,6 +24,12 @@
             justify-content: center;
             align-items: center;
         }
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
     </style>
     <body class="font-sans antialiased">
         <x-banner />
@@ -68,7 +74,7 @@
                                         </div>
                                     </div>
                                     <div class="flex items-center justify-between">
-                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Calificar</button>
+                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline " style="background-color: #00182c">Calificar</button>
                                     </div>
                                 </form>
                             </div>

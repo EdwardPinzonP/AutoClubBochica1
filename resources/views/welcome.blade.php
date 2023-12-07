@@ -11,6 +11,8 @@
         <link rel="icon" href="{{ asset('img/ACB.png') }}">
         <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
         <link rel="stylesheet" href="{{ asset('css/categorias.css') }}">
+        <!-- CSS de Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Styles -->
         <style>
             /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{background-color: rgb(233, 233, 233);margin:0;line-height:inherit;}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var
@@ -86,7 +88,11 @@
 .btn-correo {
     display: inline-block;
     padding: 8px 16px;
+<<<<<<< HEAD
     background-color: #0f283d;
+=======
+    background-color: #00182c;
+>>>>>>> b2b5f6691d9c6f7a074dacddd0da6a5834d627f3
     color: #fff;
     font-weight: bold;
     text-decoration: none;
@@ -94,9 +100,17 @@
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+footer{
+    background-color: #00182c;
+    height: 250px;
+}
 
 .btn-correo:hover {
+<<<<<<< HEAD
     background-color: #619ccc;
+=======
+    background-color: #00182c;
+>>>>>>> b2b5f6691d9c6f7a074dacddd0da6a5834d627f3
 }
 .custom-paragraph {
     margin-top: 20px;
@@ -154,12 +168,12 @@
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                             <div class="ca2">
                                 <div>
-                                    <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria A2</h2>
+                                    <h2 class="mt-6 text-xl font-semibold text-gray-900 text-center">Categoria A2</h2>
                                 </div>
                                 <div>
                                     <img src="{{ asset('img/categoriaa2.png') }}" alt="">
                                 </div>
-                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed">
+                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed text-center">
                                     Desde: $922.000
                                 </div>
                                 <div>
@@ -167,20 +181,26 @@
                                         En nuestra escuela de conducción, ofrecemos un completo programa de formación para la categoría A2, que se enfoca en motocicletas y ciclomotores. Si estás buscando obtener tu licencia para conducir estos vehículos de manera segura y confiada, nuestro equipo de instructores altamente capacitados está aquí para guiarte en cada paso del camino.
                                     </p>
                                 </div>
+<<<<<<< HEAD
                                 <a href="{{ route('enviar-correo') }}" class="btn-correo">
                                     ¡Inscríbete ahora!
                                 </a>  
+=======
+                                <a href="{{ route('enviar-correo') }}"><x-button class="btn-correo">
+                                    {{ __('¡Inscríbete ahora!') }}
+                                </x-button></a>
+>>>>>>> b2b5f6691d9c6f7a074dacddd0da6a5834d627f3
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                             <div class="cb1">
                                 <div>
-                                    <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria B1</h2>
+                                    <h2 class="mt-6 text-xl font-semibold text-gray-900 text-center">Categoria B1</h2>
                                 </div>
                                 <div>
                                     <img src="{{ asset('img/categoriab1.png') }}" alt="">
                                 </div>
-                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed">
+                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed text-center">
                                     Desde: $1.122.000
                                 </div>
                                 <div style="margin-block-end: 20px">
@@ -188,20 +208,20 @@
                                         La categoría B1 en nuestra escuela de conducción te ofrece la oportunidad de aprender a manejar automóviles y vehículos ligeros de manera segura y eficiente. Esta categoría es ideal si estás buscando obtener tu licencia para conducir coches particulares, vehículos utilitarios deportivos (SUV) y otros vehículos ligeros.  
                                     </p>
                                 </div>
-                                <a href="{{ route('enviar-correo') }}" class="btn-correo">
-                                    ¡Inscríbete ahora!
-                                </a>                                                               
+                                <a href="{{  route('enviar-correo')  }}"><x-button class="btn-correo text-center">
+                                    {{ __('¡Inscríbete ahora!') }}
+                                </x-button></a>
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                             <div style="text-align: center" class="cc1">
                                 <div>
-                                    <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria C1</h2>
+                                    <h2 class="mt-6 text-xl font-semibold text-gray-900 text-center">Categoria C1</h2>
                                 </div>
                                 <div>
                                     <img src="{{ asset('img/categoriac1.png') }}" alt="">
                                 </div>
-                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed">
+                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed text-center">
                                     Desde: $1.302.000
                                 </div>
                                 <div>
@@ -209,22 +229,28 @@
                                         La categoría C1 de conducción con enfoque en el servicio público capacita a conductores para operar vehículos especializados destinados al transporte público de pasajeros. Esta licencia permite conducir minibuses y vehículos de transporte de pasajeros con una capacidad limitada, brindando la oportunidad de trabajar en el sector del transporte público.
                                     </p>
                                 </div>
+<<<<<<< HEAD
                                 <div>
                                     <a style="position: relative; bottom: 0;" href="{{ route('enviar-correo') }}" class="btn-correo">
                                         ¡Inscríbete ahora!
                                     </a>  
                                 </div>
+=======
+                                <a href="{{ route('enviar-correo') }}"><x-button class="btn-correo ">
+                                    {{ __('¡Inscríbete ahora!') }}
+                                </x-button></a>
+>>>>>>> b2b5f6691d9c6f7a074dacddd0da6a5834d627f3
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                             <div style="text-align: center" class="cc2">
                                 <div>
-                                    <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria C2</h2>
+                                    <h2 class="mt-6 text-xl font-semibold text-gray-900 text-center">Categoria C2</h2>
                                 </div>
                                 <div>
                                     <img src="{{ asset('img/categoriac2.png') }}" alt="">
                                 </div>
-                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed">
+                                <div style="font-size: 20px" class="mt-4 text-gray-500 text-sm leading-relaxed text-center">
                                     Desde: $1.272.000
                                 </div>
                                 <div>
@@ -232,9 +258,15 @@
                                         La categoría C2 en nuestra escuela de conducción está diseñada para aquellos que desean adquirir las habilidades necesarias para operar vehículos comerciales medianos de manera segura y competente. Si tienes aspiraciones en el ámbito del transporte de carga o servicios de reparto, esta categoría es ideal para ti.
                                     </p>                                    
                                 </div>
+<<<<<<< HEAD
                                 <a style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); margin-block-end: 25px;" href="{{ route('enviar-correo') }}" class="btn-correo">
                                     ¡Inscríbete ahora!
                                 </a>
+=======
+                                <a href="{{ route('enviar-correo') }}"><x-button class="btn-correo">
+                                    {{ __('¡Inscríbete ahora!') }}
+                                </x-button></a>
+>>>>>>> b2b5f6691d9c6f7a074dacddd0da6a5834d627f3
                             </div>
                         </div>
                     </div>
@@ -242,10 +274,12 @@
             </div>
         </div>
     </body>
+
+
     <footer>
         <div class="cont">
             <div style="margin-top: 5px" class="tele">
-                <div style="font-size: 30px">
+                <div style="font-size: 25px">
                     <h2>Teléfonos</h2>
                 </div>
                 <div class="teleuno">
@@ -254,7 +288,7 @@
                         <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                         </svg>
                     </div>
-                    <div style="text-align: left;font-size:25px">(608) 744-3856</div>
+                    <div style="text-align: left;font-size:20px">(608) 744-3856</div>
                 </div>
                 <div class="teleuno">
                     <div>
@@ -262,17 +296,17 @@
                         <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                         </svg>
                     </div>
-                    <div style="text-align: left;font-size: 25px">740-0224</div>
+                    <div style="text-align: left;font-size: 20px">740-0224</div>
                 </div>
             </div>
             <div style="margin-top: 10px" class="tele">
-                <div style="font-size: 25px">Dirección: Carrera 10 A #26-08</div>
-                <div style="font-size: 25px">Barrio: Santa Lucía</div>
-                <div style="font-size: 25px">Ciudad: Tunja</div>
+                <div style="font-size: 20px">Dirección: Carrera 10 A #26-08</div>
+                <div style="font-size: 20px">Barrio: Santa Lucía</div>
+                <div style="font-size: 20px">Ciudad: Tunja</div>
             </div>
         </div>
         </div>
-        <p class="correo">Correo: recepcion.autoclub@gmail.com</p>
+        <p class="correo" style="font-size: 25px">Correo: recepcion.autoclub@gmail.com</p>
         <p>AutoClub Bochica © 2023 - Todos los derechos reservados</p>
     </footer>
 </html>
