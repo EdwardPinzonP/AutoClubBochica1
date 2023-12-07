@@ -24,6 +24,12 @@
             justify-content: center;
             align-items: center;
         }
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
     </style>
     <body class="font-sans antialiased">
         <x-banner />

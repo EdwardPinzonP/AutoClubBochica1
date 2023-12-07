@@ -92,7 +92,6 @@
             color: #ffffff;
             padding: 1rem 0;
         }
-
     </style>
     <body class="font-sans antialiased">
         <x-banner />

@@ -112,7 +112,7 @@
                 </svg>
             </div>
             <div>
-                <h3 style="font-family: cursive; font-size: 20px">Cursos</h3>
+                <h3 style="font-family: Arial; font-size: 20px">Cursos</h3>
             </div>
         </div>
         <div class="conta">

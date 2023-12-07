@@ -29,6 +29,12 @@
             width: 100%;
             margin-top: 10px;
         }
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
     </style>
     <body class="font-sans antialiased">
         <x-banner />
@@ -71,7 +77,9 @@
                                             <p class="text-sm text-gray-700">{{ $tarea->descripcion }}</p>
                                         </div>
                                         <div class="bg-gray-100 px-4 py-4 sm:px-6">
-                                            <a href="{{ route('evidenciasC2.edit', $tarea->Id_evidencia) }}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
+                                            <a href="{{ route('evidenciasC2.edit', $tarea->Id_evidencia) }}" class="text-indigo-600 hover:text-indigo-900"><x-button class="ml-4">
+                                                {{ __('Editar') }}
+                                            </x-button></a>
                                         </div>
                                     </div>
                                     @endforeach

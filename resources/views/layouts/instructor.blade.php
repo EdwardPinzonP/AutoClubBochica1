@@ -19,121 +19,87 @@
     </head>
     <body>
         <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-        
-        footer {
-            margin-top: 10%;
-            color: rgb(102, 102, 102);
-            padding: 10px;
-            text-align: center;
-        }
-        
-        .cursos{
-            display: grid;
-            grid-template-columns: 30% 70%;
-            width: 150px;
-            height: 30px;
-            margin-left: 5%;
-        }
-        
-        .cont {
-            padding: 20px;
-            background-color: #f0f0f0;
-            margin: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        
         .cursos {
             display: flex;
             align-items: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
             margin-bottom: 20px;
         }
-        
+
         .cursos div {
             margin-right: 10px;
         }
-        
+
         .cursos svg {
             width: 25px;
             height: 25px;
             fill: currentColor;
         }
-        
+
         .cursos h3 {
-            font-family: cursive;
+            font-family: 'figtree', sans-serif;
             font-size: 20px;
         }
-        
+
+        .conta {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            gap: 20px;
+            margin: 0 auto;
+            width: 95%;
+            text-align: center;
+            justify-content: center;
+        }
+
         .curso {
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 20px;
-            margin-bottom: 20px;
-            margin-left: 25px;
-            height: 350px;
-            margin-top: 10px;
+            height: 200px;
         }
-        
-        .ca2{
+
+        .curso h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .curso p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .ca2 {
             height: 100px;
             width: 100px;
             margin: 0 auto;
         }
-        
-        .cb1{
-            height: 100px;
-            width: 150px;
-            margin: 0 auto;
+
+        .curso:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
         }
-        
-        .cc1{
-            height: 100px;
-            width: 150px;
-            margin: 0 auto;
-        }
-        
-        .cc2{
-            height: 100px;
-            width: 150px;
-            margin: 0 auto;
-        }
-        
-        .curso h2 {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        
-        .curso div {
-            margin-bottom: 10px;
-        }
-        
+
         .sin-curso {
             background-color: #fff;
             border: 1px solid #ccc;
             padding: 20px;
             margin-bottom: 20px;
         }
-        
+
         .sin-curso p {
             font-size: 16px;
             font-weight: bold;
         }
-        
-        .conta{
-            margin: 0 auto;
-            width: 95%;
+
+        footer {
+            margin-top: 10%;
+            color: #666;
+            padding: 10px;
             text-align: center;
-            display: grid;
-            grid-template-columns: 20% 20% 20% 20%;
-            justify-content: center;
-            align-items: center;
         }
         </style>
         <div class="cursos">
@@ -145,7 +111,7 @@
                 </svg>
             </div>
             <div>
-                <h3 style="font-family: cursive; font-size: 20px">Cursos</h3>
+                <h3 style="font-family: Arial; font-size: 20px">Cursos</h3>
             </div>
         </div>
         <div class="conta">
@@ -165,22 +131,22 @@
                 @if($categoria->Nombre=="Categoría A2")
                         <a href="{{ route('evidenciasA2') }}">
                             <div><img class="ca2" src="{{ asset('img/categoriaa2.png') }}" alt=""></div>
-                            <p>Categoria A2 de motocicletas</p>
+                            <p class="mt-4 text-gray-500 text-sm leading-relaxed">Inspeccionar</p>
                         </a>
                     @elseif($categoria->Nombre=="Categoría B1")
                         <a href="{{ route('evidenciasB1') }}">
                             <div><img class="cb1" src="{{ asset('img/categoriab1.png') }}" alt=""></div>
-                            <p>Categoria B1 de automoviles particulares</p>
+                            <p class="mt-4 text-gray-500 text-sm leading-relaxed">Inspeccionar</p>
                         </a>
                     @elseif($categoria->Nombre=="Categoría C1")
                         <a href="{{ route('evidenciasC1') }}">
                             <div><img class="cc1" src="{{ asset('img/categoriac1.png') }}" alt=""></div>
-                            <p>Categoria C1 de automoviles de servicio publico</p>
+                            <p class="mt-4 text-gray-500 text-sm leading-relaxed">Inspeccionar</p>
                         </a>
                     @elseif($categoria->Nombre=="Categoría C2")
                         <a href="{{ route('evidenciasC2') }}">
                             <div><img class="cc2" src="{{ asset('img/categoriac2.png') }}" alt=""></div>
-                            <p>Categoria C2 de Turbos</p>
+                            <p class="mt-4 text-gray-500 text-sm leading-relaxed">Inspeccionar</p>
                         </a>
                 @endif
                 </div>
