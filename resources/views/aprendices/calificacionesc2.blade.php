@@ -24,6 +24,13 @@
             justify-content: center;
             align-items: center;
         }
+
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
     </style>
     <body class="font-sans antialiased">
         <x-banner />
@@ -55,18 +62,22 @@
                                 <a href="{{ route('calificacionesC2') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
                                 <a href="{{ route('compañerosC2') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
-                            <div>
-                                <table>
-                                    <tr>
-                                        <td>Descripción</td>
-                                        <td>Nota</td>
-                                    </tr>
-                                    @foreach($evidenciasCalificadas as $nota)
-                                    <tr>
-                                        <td>{{ $nota->evidencia->descripcion }}</td>
-                                        <td>{{ $nota->nota }}</td>
-                                    </tr>
-                                    @endforeach
+                            <div style="margin-left: 10px" class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Evidencia</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nota</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200">
+                                        @foreach($evidenciasCalificadas as $nota)
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-nowrap">{{ $nota->evidencia->descripcion }}</td>
+                                            <td class="px-6 py-4 whitespace-nowrap">{{ $nota->nota }}</td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

@@ -22,6 +22,6 @@ class CalificacionesB1Controller extends Controller
             })
             ->get();
         
-        return view('aprendices.calificacionesc1', ['evidenciasCalificadas' => $evidenciasCalificadas]);
+        return view('aprendices.calificacionesb1', ['evidenciasCalificadas' => $evidenciasCalificadas]);
     }
 }

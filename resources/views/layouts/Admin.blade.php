@@ -8,39 +8,12 @@
 </head>
 <body>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        footer {
-            margin-top: 10%;
-            color: rgb(102, 102, 102);
-            padding: 10px;
-            text-align: center;
-        }
-
-        .cursos{
-            display: grid;
-            grid-template-columns: 30% 70%;
-            width: 150px;
-            height: 30px;
-            margin-left: 5%;
-        }
-
-        .cont {
-            padding: 20px;
-            background-color: #f0f0f0;
-            margin: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
         .cursos {
             display: flex;
             align-items: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
             margin-bottom: 20px;
         }
 
@@ -55,78 +28,49 @@
         }
 
         .cursos h3 {
-            font-family: cursive;
+            font-family: 'figtree', sans-serif;
             font-size: 20px;
+        }
+
+        .conta {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            gap: 20px;
+            margin: 0 auto;
+            width: 95%;
+            text-align: center;
+            justify-content: center;
         }
 
         .curso {
             background-color: #fff;
             border: 1px solid #ccc;
+            border-radius: 5px;
             padding: 20px;
-            margin-bottom: 20px;
-            margin-left: 25px;
             height: 200px;
-            margin-top: 10px;
-            border-radius: 8px;
-        }
-
-        .ca2{
-            height: 100px;
-            width: 100px;
-            margin: 0 auto;
-        }
-
-        .cb1{
-            height: 100px;
-            width: 150px;
-            margin: 0 auto;
-        }
-
-        .cc1{
-            height: 100px;
-            width: 150px;
-            margin: 0 auto;
-        }
-
-        .cc2{
-            height: 100px;
-            width: 150px;
-            margin: 0 auto;
         }
 
         .curso h2 {
             font-size: 18px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
+        .curso p {
+            font-size: 14px;
+            color: #666;
+        }
 
-.categoria-container {
-    text-align: center;
-    transition: box-shadow ease;
-}
+        .ca2 {
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+        }
 
-.categoria-container h2 {
-    margin-bottom: 10px;
-}
-
-.categoria-link {
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.categoria-link:hover img {
-    opacity: 0.8;
-}
-
-.categoria-link p {
-    margin-top: 10px;
-}
-
-.categoria-container:hover {
-    box-shadow: 0 0 10px rgba(134, 134, 134, 0.959); /* Cambia el color o tamaño según prefieras */
-}rgba(121, 121, 121, 0.959)
-
+        .curso:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
 
         .sin-curso {
             background-color: #fff;
@@ -140,14 +84,11 @@
             font-weight: bold;
         }
 
-        .conta{
-            margin: 0 auto;
-            width: 95%;
+        footer {
+            margin-top: 10%;
+            color: #666;
+            padding: 10px;
             text-align: center;
-            display: grid;
-            grid-template-columns: 20% 20% 20% 20%;
-            justify-content: center;
-            align-items: center;
         }
     </style>
     <div class="cursos">

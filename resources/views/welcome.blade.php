@@ -51,6 +51,21 @@
     text-align: center;
     margin-block-end: -70px;
 }
+.btn-correo {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3490dc;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-correo:hover {
+    background-color: #2779bd;
+}
         </style>
     </head>
     <body class="antialiased">
@@ -134,9 +149,9 @@
                                         La categoría B1 en nuestra escuela de conducción te ofrece la oportunidad de aprender a manejar automóviles y vehículos ligeros de manera segura y eficiente. Esta categoría es ideal si estás buscando obtener tu licencia para conducir coches particulares, vehículos utilitarios deportivos (SUV) y otros vehículos ligeros.  
                                     </p>
                                 </div>
-                                <a href="{{  route('enviar-correo')  }}"><x-button class="ml-4">
-                                    {{ __('¡Inscríbete ahora!') }}
-                                </x-button></a>
+                                <a href="{{ route('enviar-correo') }}" class="btn-correo">
+                                    ¡Inscríbete ahora!
+                                </a>                                                               
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
