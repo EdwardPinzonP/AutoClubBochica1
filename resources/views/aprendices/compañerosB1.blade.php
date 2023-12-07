@@ -10,6 +10,7 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -24,17 +25,18 @@
             justify-content: center;
             align-items: center;
         }
-        .evidencias{
-            display: grid;
-            background: green;
-            border-radius: 5px;
-            width: 90%;
-            height: 30px;
-            justify-content: center;
-            margin: 0 auto;
-            margin-top: 10px;
-            margin-block-end: 10px;
-            color: white;
+
+        .h2-style {
+        color: #333;
+        font-size: 24px;
+        text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
         }
     </style>
     <body class="font-sans antialiased">
@@ -67,53 +69,67 @@
                                 <a href="{{ route('calificacionesB1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
                                 <a href="{{ route('compañerosB1') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
-                            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                                <div>Aprendices</div>
-                            <table>
-                                <tr style="text-align: center">
-                                    <td>Nombre</td>
-                                    <td>Apellido</td>
-                                    <td>Correo</td>
-                                    <td>Tipo de documento</td>
-                                    <td>Numero de documento</td>
-                                    <td>Fecha de nacimiento</td>
-                                    <td>Contacto</td>
-                                </tr>
-                                @foreach($aprendices as $apren)
-                                    <tr>
-                                        <td>{{ $apren->name }}</td>
-                                        <td>{{ $apren->lastname }}</td>
-                                        <td>{{ $apren->email }}</td>
-                                        <td>{{ $apren->tipodocumento }}</td>
-                                        <td>{{ $apren->numerodocumento }}</td>
-                                        <td>{{ $apren->fechanacimiento }}</td>
-                                        <td>{{ $apren->contacto }}</td>
-                                    </tr>
-                                @endforeach
-                            </table>
-                            <div>Instructores</div>
-                            <table>
-                                <tr style="text-align: center">
-                                    <td>Nombre</td>
-                                    <td>Apellido</td>
-                                    <td>Correo</td>
-                                    <td>Tipo de documento</td>
-                                    <td>Numero de documento</td>
-                                    <td>Fecha de nacimiento</td>
-                                    <td>Contacto</td>
-                                </tr>
-                                @foreach($instructores as $profe)
-                                    <tr>
-                                        <td>{{ $profe->name }}</td>
-                                        <td>{{ $profe->lastname }}</td>
-                                        <td>{{ $profe->email }}</td>
-                                        <td>{{ $profe->tipodocumento }}</td>
-                                        <td>{{ $profe->numerodocumento }}</td>
-                                        <td>{{ $profe->fechanacimiento }}</td>
-                                        <td>{{ $profe->contacto }}</td>
-                                    </tr>
-                                @endforeach
-                            </table>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h2 class="h2-style">Aprendices</h2>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nombre</th>
+                                                        <th>Apellido</th>
+                                                        <th>Correo</th>
+                                                        <th>Tipo de documento</th>
+                                                        <th>Número de documento</th>
+                                                        <th>Contacto</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach($aprendices as $apren)
+                                                    <tr>
+                                                        <td>{{ $apren->name }}</td>
+                                                        <td>{{ $apren->lastname }}</td>
+                                                        <td>{{ $apren->email }}</td>
+                                                        <td>{{ $apren->tipodocumento }}</td>
+                                                        <td>{{ $apren->numerodocumento }}</td>
+                                                        <td>{{ $apren->contacto }}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h2 class="h2-style">Instructores</h2>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nombre</th>
+                                                        <th>Apellido</th>
+                                                        <th>Correo</th>
+                                                        <th>Tipo de documento</th>
+                                                        <th>Número de documento</th>
+                                                        <th>Contacto</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach($instructores as $profe)
+                                                    <tr>
+                                                        <td>{{ $profe->name }}</td>
+                                                        <td>{{ $profe->lastname }}</td>
+                                                        <td>{{ $profe->email }}</td>
+                                                        <td>{{ $profe->tipodocumento }}</td>
+                                                        <td>{{ $profe->numerodocumento }}</td>
+                                                        <td>{{ $profe->contacto }}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

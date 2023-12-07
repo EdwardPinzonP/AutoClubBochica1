@@ -24,6 +24,45 @@
             justify-content: center;
             align-items: center;
         }
+
+        .custom-form {
+            width: 600px;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        .custom-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .custom-form select,
+        .custom-form input[type="file"],
+        .custom-form button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .custom-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .custom-form button:hover {
+            background-color: #113c69;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
     </style>
     <body class="font-sans antialiased">
         <x-banner />
@@ -55,20 +94,27 @@
                                 <a href="{{ route('calificacionesC1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
                                 <a href="{{ route('compañerosC1') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
-                            <div>
-                                <form action="{{ route('responderC1.store') }}" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    <label for="Id_evidencia">Seleccione la evidencia</label>
-                                    <select name="Id_evidencia" id="Id_evidencia">
-                                        @foreach($evidencias as $evi)
-                                            <option value="{{ $evi->Id_evidencia }}">{{ $evi->descripcion }}</option>
-                                        @endforeach
-                                    </select>
-                                    <label for="adjunto">Adjunte su evidencia</label>
-                                    <input type="file" name="adjunto" id="adjunto">
-                                    <button>Responder</button>
-                                </form>
-                            </div>
+                            <div class="custom-form">
+                                <div class="container">
+                                    <form action="{{ route('responderC1.store') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="form-group">
+                                            <label for="Id_evidencia">Seleccione la evidencia</label>
+                                            <select class="form-control" name="Id_evidencia" id="Id_evidencia">
+                                                @foreach($evidencias as $evi)
+                                                <option value="{{ $evi->Id_evidencia }}">{{ $evi->descripcion }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="adjunto">Adjunte su evidencia</label>
+                                            <input type="file" class="form-control-file" name="adjunto" id="adjunto">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Responder</button>
+                                    </form>
+                                </div>
+                                
+                            </div> 
                         </div>
                     </div>
                 </div>

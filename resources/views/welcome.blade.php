@@ -54,7 +54,11 @@
 .btn-correo {
     display: inline-block;
     padding: 8px 16px;
+<<<<<<< HEAD
     background-color: #00182c;
+=======
+    background-color: #3490dc;
+>>>>>>> 137232877d0aeeed02c6e16ab1d3cdcb2de85cdf
     color: #fff;
     font-weight: bold;
     text-decoration: none;
@@ -62,6 +66,7 @@
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+<<<<<<< HEAD
 footer{
     background-color: #00182c;
     height: 250px;
@@ -69,6 +74,11 @@ footer{
 
 .btn-correo:hover {
     background-color: #00182c;
+=======
+
+.btn-correo:hover {
+    background-color: #2779bd;
+>>>>>>> 137232877d0aeeed02c6e16ab1d3cdcb2de85cdf
 }
         </style>
     </head>
@@ -153,9 +163,15 @@ footer{
                                         La categoría B1 en nuestra escuela de conducción te ofrece la oportunidad de aprender a manejar automóviles y vehículos ligeros de manera segura y eficiente. Esta categoría es ideal si estás buscando obtener tu licencia para conducir coches particulares, vehículos utilitarios deportivos (SUV) y otros vehículos ligeros.  
                                     </p>
                                 </div>
+<<<<<<< HEAD
                                 <a href="{{  route('enviar-correo')  }}"><x-button class="btn-correo">
                                     {{ __('¡Inscríbete ahora!') }}
                                 </x-button></a>
+=======
+                                <a href="{{ route('enviar-correo') }}" class="btn-correo">
+                                    ¡Inscríbete ahora!
+                                </a>                                                               
+>>>>>>> 137232877d0aeeed02c6e16ab1d3cdcb2de85cdf
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">

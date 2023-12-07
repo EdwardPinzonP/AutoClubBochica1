@@ -24,22 +24,26 @@
             justify-content: center;
             align-items: center;
         }
-        .evidencias{
-            display: grid;
-            background: green;
+        
+        .btn-responder {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
             border-radius: 5px;
-            width: 90%;
-            height: 30px;
-            justify-content: center;
-            margin: 0 auto;
-            margin-top: 10px;
-            margin-block-end: 10px;
-            color: white;
+            transition: background-color 0.3s ease;
         }
-        .evidencia{
-            background: green;
-            width: 100%;
-            margin-top: 10px;
+
+        .btn-responder:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
         }
     </style>
     <body class="font-sans antialiased">
@@ -72,24 +76,21 @@
                                 <a href="{{ route('calificacionesB1') }}"><x-button style="width: 210px; margin-top: 10px;" class="ml-4">{{ __('Calificaciones') }}</x-button></a>
                                 <a href="{{ route('compañerosB1') }}"><x-button style="width: 210px; margin-top: 10px; margin-block-end: 10px" class="ml-4">{{ __('Participantes') }}</x-button></a>
                             </div>
-                            <div>
-                                    @foreach($evidencias as $tareas)
-                                    <table class="evidencia">
-                                            <tr>
-                                                <td>Instructor</td>
-                                                <td>Fecha</td>
-                                                <td>Descripción</td>
-                                                <td>Adjuntar Evidencia</td>
-                                            </tr>
-                                            <tr>
-                                                <td>{{ $tareas->name }} {{ $tareas->lastname }}</td>
-                                                <td>{{ $tareas->fechahora }}</td>
-                                                <td>{{ $tareas->descripcion }}</td>
-                                                <td><a href="{{ route('responderB1.create') }}"><button>Responder</button></a></td>
-                                            </tr>
-                                    </table>
+                            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                                <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                                    @foreach($evidencias as $tarea) 
+                                    <div class="bg-white overflow-hidden shadow-md rounded-lg">
+                                        <div class="px-4 py-5 sm:p-6">
+                                            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ $tarea->name }} {{ $tarea->lastname }}</h3>
+                                            <p class="text-sm text-gray-600 mb-4">{{ $tarea->fechahora }}</p>
+                                            <p class="text-sm text-gray-700">{{ $tarea->descripcion }}</p>
+                                        </div>
+                                        <div class="bg-gray-100 px-4 py-4 sm:px-6">
+                                            <td><a href="{{ route('responderB1.create') }}" class="btn-responder">Responder</a></td>                                        </div>
+                                        </div>
                                     @endforeach
-                            </div>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
