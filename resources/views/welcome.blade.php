@@ -36,6 +36,38 @@
     font-family: cursive;
 }
 
+.ca2 img{
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.ca2{
+    text-align: center; 
+}
+
+.cb1 img{
+    height: 150px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.cb1{
+    text-align: center; 
+}
+
+.cc1 img{
+    height: 150px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.cc2 img{
+    height: 150px;
+    width: 200px;
+    margin: 0 auto;
+}
+
 .informa{
     font-size: 40px;
     color: white;
@@ -54,7 +86,7 @@
 .btn-correo {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #3490dc;
+    background-color: #0f283d;
     color: #fff;
     font-weight: bold;
     text-decoration: none;
@@ -64,8 +96,15 @@
 }
 
 .btn-correo:hover {
-    background-color: #2779bd;
+    background-color: #619ccc;
 }
+.custom-paragraph {
+    margin-top: 20px;
+    color: #2b2e31;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
         </style>
     </head>
     <body class="antialiased">
@@ -124,13 +163,13 @@
                                     Desde: $922.000
                                 </div>
                                 <div>
-                                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                                    <p class="custom-paragraph">
                                         En nuestra escuela de conducción, ofrecemos un completo programa de formación para la categoría A2, que se enfoca en motocicletas y ciclomotores. Si estás buscando obtener tu licencia para conducir estos vehículos de manera segura y confiada, nuestro equipo de instructores altamente capacitados está aquí para guiarte en cada paso del camino.
                                     </p>
                                 </div>
-                                <a href="{{ route('enviar-correo') }}"><x-button class="ml-4">
-                                    {{ __('¡Inscríbete ahora!') }}
-                                </x-button></a>
+                                <a href="{{ route('enviar-correo') }}" class="btn-correo">
+                                    ¡Inscríbete ahora!
+                                </a>  
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
@@ -145,7 +184,7 @@
                                     Desde: $1.122.000
                                 </div>
                                 <div style="margin-block-end: 20px">
-                                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                                    <p class="custom-paragraph">
                                         La categoría B1 en nuestra escuela de conducción te ofrece la oportunidad de aprender a manejar automóviles y vehículos ligeros de manera segura y eficiente. Esta categoría es ideal si estás buscando obtener tu licencia para conducir coches particulares, vehículos utilitarios deportivos (SUV) y otros vehículos ligeros.  
                                     </p>
                                 </div>
@@ -155,7 +194,7 @@
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div class="cc1">
+                            <div style="text-align: center" class="cc1">
                                 <div>
                                     <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria C1</h2>
                                 </div>
@@ -166,17 +205,19 @@
                                     Desde: $1.302.000
                                 </div>
                                 <div>
-                                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                        La categoría C1 de nuestra escuela de conducción se enfoca en prepararte para manejar vehículos de carga ligera y transporte de personas. Si estás interesado en expandir tus habilidades de conducción y adquirir el conocimiento necesario para operar vehículos más grandes y versátiles, esta categoría es ideal para ti.
+                                    <p class="custom-paragraph">
+                                        La categoría C1 de conducción con enfoque en el servicio público capacita a conductores para operar vehículos especializados destinados al transporte público de pasajeros. Esta licencia permite conducir minibuses y vehículos de transporte de pasajeros con una capacidad limitada, brindando la oportunidad de trabajar en el sector del transporte público.
                                     </p>
                                 </div>
-                                <a href="{{ route('enviar-correo') }}"><x-button class="ml-4">
-                                    {{ __('¡Inscríbete ahora!') }}
-                                </x-button></a>
+                                <div>
+                                    <a style="position: relative; bottom: 0;" href="{{ route('enviar-correo') }}" class="btn-correo">
+                                        ¡Inscríbete ahora!
+                                    </a>  
+                                </div>
                             </div>
                         </div>
                         <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div class="cc2">
+                            <div style="text-align: center" class="cc2">
                                 <div>
                                     <h2 class="mt-6 text-xl font-semibold text-gray-900">Categoria C2</h2>
                                 </div>
@@ -187,13 +228,13 @@
                                     Desde: $1.272.000
                                 </div>
                                 <div>
-                                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                                    <p class="custom-paragraph">
                                         La categoría C2 en nuestra escuela de conducción está diseñada para aquellos que desean adquirir las habilidades necesarias para operar vehículos comerciales medianos de manera segura y competente. Si tienes aspiraciones en el ámbito del transporte de carga o servicios de reparto, esta categoría es ideal para ti.
-                                    </p>
+                                    </p>                                    
                                 </div>
-                                <a href="{{ route('enviar-correo') }}"><x-button class="ml-4">
-                                    {{ __('¡Inscríbete ahora!') }}
-                                </x-button></a>
+                                <a style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); margin-block-end: 25px;" href="{{ route('enviar-correo') }}" class="btn-correo">
+                                    ¡Inscríbete ahora!
+                                </a>
                             </div>
                         </div>
                     </div>
