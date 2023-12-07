@@ -23,7 +23,76 @@
             grid-template-columns: 20% 80%;
             justify-content: center;
             align-items: center;
+
         }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f7fafc;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .page-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .section-header {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 1.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        td {
+            background-color: #ffffff;
+        }
+
+        td a button {
+            padding: 8px 16px;
+            background-color: #e53e3e;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        td a button:hover {
+            background-color: #c53030;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 1rem 0;
+        }
+
     </style>
     <body class="font-sans antialiased">
         <x-banner />

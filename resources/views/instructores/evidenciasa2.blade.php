@@ -66,7 +66,9 @@
                                             <p class="text-sm text-gray-700">{{ $tarea->descripcion }}</p>
                                         </div>
                                         <div class="bg-gray-100 px-4 py-4 sm:px-6">
-                                            <a href="{{ route('evidenciasA2.edit', $tarea->Id_evidencia) }}" class="text-indigo-600 hover:text-indigo-900">Editar</a>
+                                            <a href="{{ route('evidenciasA2.edit', $tarea->Id_evidencia) }}" class="text-indigo-600 hover:text-indigo-900"><x-button class="ml-3">
+                                                {{ __('Editar') }}
+                                            </x-button></a>
                                         </div>
                                     </div>
                                     @endforeach

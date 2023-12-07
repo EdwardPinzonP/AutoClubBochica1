@@ -61,7 +61,7 @@
                                     <label for="descripcion" style="display: block; margin-bottom: 10px;">Descripción</label>
                                     <input type="text" name="descripcion" id="descripcion" style="padding: 8px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;">
                                     <div style="text-align: center;">
-                                        <button type="submit" style="padding: 8px 16px; background-color: #008CBA; color: white; border: none; border-radius: 3px; cursor: pointer;">Añadir evidencia</button>
+                                        <button type="submit" style="padding: 8px 16px; background-color: #00182c; color: white; border: none; border-radius: 3px; cursor: pointer;">Añadir evidencia</button>
                                     </div>
                                 </form>
                             </div>  

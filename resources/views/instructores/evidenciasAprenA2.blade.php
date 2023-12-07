@@ -66,10 +66,14 @@
                                                 <p class="text-sm text-gray-600 mb-4">{{ $tarea->nota }}</p>
                                             </div>
                                             <div class="bg-gray-100 px-4 py-4 sm:px-6">
-                                                <a href="{{ route('descargarA2.adjunto', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900">Descargar</a>
+                                                <a href="{{ route('descargarA2.adjunto', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900"><x-button class="btn-correo">
+                                                    {{ __('Descargar') }}
+                                                </x-button></a>
                                             </div>
                                             <div class="bg-gray-100 px-4 py-4 sm:px-6">
-                                                <a href="{{ route('calificaraprena2', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900">Calificar</a>
+                                                <a href="{{ route('calificaraprena2', $tarea->Id_evidenciaR) }}" class="text-indigo-600 hover:text-indigo-900"><x-button class="btn-correo">
+                                                    {{ __('Calificar') }}
+                                                </x-button></a>
                                             </div>
                                         </div>
                                     @endforeach
